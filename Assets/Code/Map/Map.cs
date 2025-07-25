@@ -58,7 +58,7 @@ public class Map : MonoBehaviour
                 for (int y = 0; y < 100; y++)
                 {
                     VoxelType voxelType = VoxelType.Dirt;
-                    if (y > groundPosition || y < groundPosition)
+                    if (y > groundPosition)
                         voxelType = VoxelType.Air;
                     if (y == groundPosition)
                         voxelType = VoxelType.Grass;
