@@ -23,9 +23,9 @@ public class NetworkGrid : NetworkBehaviour
         TileDataArray.OnValueChanged += UpdateGrid;
         _tiles = new GameObject[_gridSize, _gridSize];
 
-        StartCoroutine(WaitAndChange());
+        //StartCoroutine(WaitAndChange());
         
-        _ = BuildGrid();
+        //_ = BuildGrid();
     }
 
     public void UpdateGrid(TileDataArray previousValue, TileDataArray newValue)
@@ -36,7 +36,7 @@ public class NetworkGrid : NetworkBehaviour
 
     private IEnumerator WaitAndChange()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(1f);
 
         if (IsServer)
         {
@@ -60,6 +60,12 @@ public class NetworkGrid : NetworkBehaviour
         }
     }
 
+    public async Task BuildTempGrid()
+    {
+        await Awaitable.NextFrameAsync();
+
+
+    }
     private async Task BuildGrid()
     {
         var data = TileDataArray.Value;
@@ -77,7 +83,7 @@ public class NetworkGrid : NetworkBehaviour
                 }
 
                 _tiles[i, j] = Instantiate(_tilePrefab, new Vector3(i, 0f, j), Quaternion.identity);
-                _tiles[i, j].transform.localScale = new Vector3(1f, data.Get(i, j).Height, 1f);
+                _tiles[i, j].transform.localScale = new Vector3(1f, Mathf.Clamp(data.Get(i, j).Height, 1f, 5f), 1f);
             }
         }
     }
