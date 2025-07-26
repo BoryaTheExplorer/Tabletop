@@ -55,9 +55,10 @@ public class Map : MonoBehaviour
                 float noiseValue = Mathf.PerlinNoise((data.WorldPosition.x + x) * NoiseScale, (data.WorldPosition.z + z) * NoiseScale);
                 int groundPosition = Mathf.RoundToInt(noiseValue * ChunkHeight);
 
-                for (int y = 0; y < 100; y++)
+                for (int y = 0; y < data.ChunkHeight; y++)
                 {
                     VoxelType voxelType = VoxelType.Dirt;
+                    if (y > groundPosition)
                     if (y > groundPosition)
                         voxelType = VoxelType.Air;
                     if (y == groundPosition)
@@ -69,6 +70,33 @@ public class Map : MonoBehaviour
         }
     }
 
+    public void ReconstructModifiedChunks()
+    {
+        ChunkData data;
+        foreach (ChunkRenderer renderer in ChunkDictionary.Values)
+        {
+            data = renderer.ChunkData;
+            if (data.Modified)
+            {
+                data.Modified = false;
+                renderer.InitChunk(data);
+                renderer.UpdateChunk(Chunk.GetChunkMeshData(data));
+            }
+        }
+    }
+    public ChunkData GetChunkDataFromWorldCoordinates(Vector3 position)
+    {
+        int x = Mathf.FloorToInt(position.x / ChunkSize) * ChunkSize;
+        int z = Mathf.FloorToInt(position.z / ChunkSize) * ChunkSize;
+
+        if (x < 0 || z < 0 || x > (MapSizeInChunks - 1) * ChunkSize || z > (MapSizeInChunks - 1) * ChunkSize)
+            return null;
+
+        ChunkData containerChunk = null;
+        ChunkDataDictionary.TryGetValue(new Vector3Int(x, 0, z), out containerChunk);
+
+        return containerChunk;
+    }
     public VoxelType GetVoxelFromChunkCoordinates(ChunkData chunkData, int x, int y, int z)
     {
         Vector3Int pos = Chunk.ChunkPositionFromVoxelCoordinates(this, x, y, z);

@@ -1,0 +1,69 @@
+using UnityEngine;
+
+public class VoxelEditor : MonoBehaviour
+{
+    [SerializeField] private Map _map;
+    [SerializeField] private GameObject _debugObject;
+    [SerializeField] private VoxelType _voxelToPlace;
+    private void Start()
+    {
+        GameInput.Instance.OnClickPerformed += GameInput_OnClickPerformed;
+        GameInput.Instance.OnRightClickPerformed += GameInput_OnRightClickPerformed;
+    }
+
+    private void GameInput_OnRightClickPerformed()
+    {
+        EditVoxelPointedAt(VoxelEditorAction.Remove, VoxelType.Air);
+    }
+
+    private void GameInput_OnClickPerformed()
+    {
+        EditVoxelPointedAt(VoxelEditorAction.Place, _voxelToPlace);
+    }
+
+    private void EditVoxelPointedAt(VoxelEditorAction action, VoxelType voxel)
+    {
+        Vector3 pos;
+        Vector3 normal;
+
+        VoxelMapScanner.Scan(out pos, out normal);
+        
+        if (action == VoxelEditorAction.Place)
+        {
+            pos += normal;
+        }
+        else
+        {
+            pos -= normal;
+        }
+
+        pos += new Vector3(.5f, .5f, .5f);
+
+        if (pos.x < 0)
+            return;
+
+        ChunkData data = _map.GetChunkDataFromWorldCoordinates(pos);
+        Debug.Log(data);
+
+        if (data == null)
+            return;
+
+        int x = Mathf.FloorToInt(pos.x);
+        int y = Mathf.FloorToInt(pos.y);
+        int z = Mathf.FloorToInt(pos.z);
+
+        //Debug.Log("X: " + x + ", Z: " + z);
+        Vector3Int voxelPos = new Vector3Int(x, y, z);
+
+        Chunk.SetVoxel(data, voxelPos - data.WorldPosition, voxel);
+        data.Modified = true;
+
+        _map.ReconstructModifiedChunks();
+    }
+
+    private void OnDisable()
+    {
+        GameInput.Instance.OnClickPerformed -= GameInput_OnClickPerformed;
+        GameInput.Instance.OnRightClickPerformed -= GameInput_OnRightClickPerformed;
+    }
+}

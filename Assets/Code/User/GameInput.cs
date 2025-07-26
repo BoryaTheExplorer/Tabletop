@@ -8,6 +8,9 @@ public class GameInput : MonoBehaviour
 
     public event Action OnClickStarted;
     public event Action OnClickCanceled;
+    public event Action OnClickPerformed;
+
+    public event Action OnRightClickPerformed;
 
     public event Action OnMiddleTriggerStarted;
     public event Action OnMiddleTriggerCanceled;
@@ -31,28 +34,42 @@ public class GameInput : MonoBehaviour
         _inputActions = new InputSystem_Actions();
         _inputActions.Player.Enable();
 
-        _inputActions.Player.Click.started += Click_started;
-        _inputActions.Player.Click.canceled += Click_canceled;
-
-        _inputActions.Player.AdditionalOption.started += AdditionalOption_started;
-        _inputActions.Player.AdditionalOption.canceled += AdditionalOption_canceled;
-        _inputActions.Player.AdditionalOption.performed += AdditionalOption_performed;
-
-        _inputActions.Player.MiddleTrigger.started += MiddleTrigger_started;
-        _inputActions.Player.MiddleTrigger.canceled += MiddleTrigger_canceled;
+        //Click
+        {
+            _inputActions.Player.Click.started += Click_started;
+            _inputActions.Player.Click.canceled += Click_canceled;
+            _inputActions.Player.Click.performed += Click_performed;
+        }
+        //
+        {
+            _inputActions.Player.RightClick.performed += RightClick_performed;
+        }
+        //AdditionalOption
+        {
+            _inputActions.Player.AdditionalOption.started += AdditionalOption_started;
+            _inputActions.Player.AdditionalOption.canceled += AdditionalOption_canceled;
+            _inputActions.Player.AdditionalOption.performed += AdditionalOption_performed;
+        }
+        //MiddleTrigger
+        {
+            _inputActions.Player.MiddleTrigger.started += MiddleTrigger_started;
+            _inputActions.Player.MiddleTrigger.canceled += MiddleTrigger_canceled;
+        }
+        
     }
 
     
 
+    //
     private void MiddleTrigger_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         OnMiddleTriggerCanceled?.Invoke();
     }
-
     private void MiddleTrigger_started(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         OnMiddleTriggerStarted?.Invoke();
     }
+    
     //
     private void AdditionalOption_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
@@ -67,15 +84,25 @@ public class GameInput : MonoBehaviour
     {
         OnAdditionalOptionStarted?.Invoke();
     }
+    
     //
+    private void Click_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        OnClickPerformed?.Invoke();
+    }
     private void Click_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         OnClickCanceled?.Invoke();
     }
-
     private void Click_started(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         OnClickStarted?.Invoke();
+    }
+
+    //
+    private void RightClick_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        OnRightClickPerformed?.Invoke();
     }
 
     public Vector2 GetPointerDelta()
@@ -86,6 +113,10 @@ public class GameInput : MonoBehaviour
     public float GetScrollDelta()
     {
         return _inputActions.Player.Scroll.ReadValue<float>();
+    }
+    public Vector2 GetPointerScreenPosition()
+    {
+        return _inputActions.Player.Pointer.ReadValue<Vector2>();
     }
 
     private void OnDisable()
