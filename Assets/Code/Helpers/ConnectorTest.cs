@@ -12,10 +12,12 @@ public class ConnectorTest : MonoBehaviour
         _host.onClick.AddListener(() =>
         {
             NetworkManager.Singleton.StartHost();
+            gameObject.SetActive(false);
         });
         _client.onClick.AddListener(() =>
         {
             NetworkManager.Singleton.StartClient();
+            gameObject.SetActive(false);
         });
     }
 }

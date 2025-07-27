@@ -2,9 +2,9 @@ using UnityEngine;
 
 public enum VoxelType
 {
-    Air,
-    Nothing,
-    Grass,
+    Air = 0,
+    Nothing = 1,
+    Grass = 2,
     Dirt,
     Stone,
     StoneBrick,

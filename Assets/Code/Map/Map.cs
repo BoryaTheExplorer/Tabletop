@@ -54,7 +54,7 @@ public class Map : MonoBehaviour
             for (int z = 0; z < data.ChunkSize; z++)
             {
                 float noiseValue = Mathf.PerlinNoise((data.WorldPosition.x + x) * NoiseScale, (data.WorldPosition.z + z) * NoiseScale);
-                int groundPosition = Mathf.RoundToInt(noiseValue * ChunkHeight);
+                int groundPosition = Mathf.RoundToInt(noiseValue * 25);
 
                 for (int y = 0; y < data.ChunkHeight; y++)
                 {
@@ -85,15 +85,12 @@ public class Map : MonoBehaviour
         containerChunk.InitChunk(data);
         containerChunk.UpdateChunk(meshData);
 
-        Debug.Log("Voxel Position: " + voxelPosition);
-
         if (voxelPosition.x == 0)
         {
             ChunkDictionary.TryGetValue(data.WorldPosition + new Vector3Int(-1, 0, 0) * ChunkSize, out containerChunk);
 
             if (containerChunk != null)
             {
-                Debug.Log(" Modifying Neighbour.");
                 meshData = Chunk.GetChunkMeshData(containerChunk.ChunkData);
                 containerChunk.UpdateChunk(meshData);
             }
@@ -104,9 +101,7 @@ public class Map : MonoBehaviour
 
             if (containerChunk != null)
             {
-                Debug.Log(" Modifying Neighbour.");
                 meshData = Chunk.GetChunkMeshData(containerChunk.ChunkData);
-
                 containerChunk.UpdateChunk(meshData);
             }
         }
@@ -116,9 +111,7 @@ public class Map : MonoBehaviour
 
             if (containerChunk != null)
             {
-                Debug.Log(" Modifying Neighbour.");
                 meshData = Chunk.GetChunkMeshData(containerChunk.ChunkData);
-
                 containerChunk.UpdateChunk(meshData);
             }
         }
@@ -128,9 +121,7 @@ public class Map : MonoBehaviour
 
             if (containerChunk != null)
             {
-                Debug.Log(" Modifying Neighbour. " + containerChunk.ChunkData.WorldPosition);
                 meshData = Chunk.GetChunkMeshData(containerChunk.ChunkData);
-
                 containerChunk.UpdateChunk(meshData);
             }
         }

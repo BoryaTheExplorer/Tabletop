@@ -3,14 +3,19 @@ using UnityEngine;
 public class VoxelEditor : MonoBehaviour
 {
     [SerializeField] private Map _map;
+    [SerializeField] private NetworkMap _networkMap;
     [SerializeField] private GameObject _debugObject;
     [SerializeField] private VoxelType _voxelToPlace;
     private void Start()
     {
+        //GameInput.Instance.OnClickPerformed += GameInput_OnClickPerformed;
+        //GameInput.Instance.OnRightClickPerformed += GameInput_OnRightClickPerformed;
+    }
+    private void OnEnable()
+    {
         GameInput.Instance.OnClickPerformed += GameInput_OnClickPerformed;
         GameInput.Instance.OnRightClickPerformed += GameInput_OnRightClickPerformed;
     }
-
     private void GameInput_OnRightClickPerformed()
     {
         EditVoxelPointedAt(VoxelEditorAction.Remove, VoxelType.Air);
@@ -58,6 +63,18 @@ public class VoxelEditor : MonoBehaviour
         data.Modified = true;
 
         _map.ReconstructModifiedChunk(data, voxelPos);
+        _networkMap.SendUpdateMapRPC(new NetworkVoxelData
+        {
+            Voxel = voxel,
+
+            WorldX = data.WorldPosition.x,
+            WorldY = data.WorldPosition.y,
+            WorldZ = data.WorldPosition.z,
+
+            VoxelX = voxelPos.x,
+            VoxelY = voxelPos.y,
+            VoxelZ = voxelPos.z
+        });
     }
 
     private void OnDisable()
