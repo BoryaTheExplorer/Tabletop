@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Map : MonoBehaviour
@@ -70,17 +71,67 @@ public class Map : MonoBehaviour
         }
     }
 
-    public void ReconstructModifiedChunks()
+    public void ReconstructModifiedChunk(ChunkData data, Vector3Int voxelPosition)
     {
-        ChunkData data;
-        foreach (ChunkRenderer renderer in ChunkDictionary.Values)
+        ChunkRenderer containerChunk;
+        MeshData meshData;
+        ChunkDictionary.TryGetValue(data.WorldPosition, out containerChunk);
+
+        if (containerChunk == null)
+            return;
+
+        meshData = Chunk.GetChunkMeshData(data);
+
+        containerChunk.InitChunk(data);
+        containerChunk.UpdateChunk(meshData);
+
+        Debug.Log("Voxel Position: " + voxelPosition);
+
+        if (voxelPosition.x == 0)
         {
-            data = renderer.ChunkData;
-            if (data.Modified)
+            ChunkDictionary.TryGetValue(data.WorldPosition + new Vector3Int(-1, 0, 0) * ChunkSize, out containerChunk);
+
+            if (containerChunk != null)
             {
-                data.Modified = false;
-                renderer.InitChunk(data);
-                renderer.UpdateChunk(Chunk.GetChunkMeshData(data));
+                Debug.Log(" Modifying Neighbour.");
+                meshData = Chunk.GetChunkMeshData(containerChunk.ChunkData);
+                containerChunk.UpdateChunk(meshData);
+            }
+        }
+        if (voxelPosition.x >= 15)
+        {
+            ChunkDictionary.TryGetValue(data.WorldPosition + new Vector3Int(1, 0, 0) * ChunkSize, out containerChunk);
+
+            if (containerChunk != null)
+            {
+                Debug.Log(" Modifying Neighbour.");
+                meshData = Chunk.GetChunkMeshData(containerChunk.ChunkData);
+
+                containerChunk.UpdateChunk(meshData);
+            }
+        }
+        if (voxelPosition.z == 0)
+        {
+            ChunkDictionary.TryGetValue(data.WorldPosition + new Vector3Int(0, 0, -1) * ChunkSize, out containerChunk);
+
+            if (containerChunk != null)
+            {
+                Debug.Log(" Modifying Neighbour.");
+                meshData = Chunk.GetChunkMeshData(containerChunk.ChunkData);
+
+                containerChunk.UpdateChunk(meshData);
+            }
+        }
+        if (voxelPosition.z >= 15)
+        {
+            ChunkDictionary.TryGetValue(data.WorldPosition + new Vector3Int(0, 0, 1) * ChunkSize, out containerChunk);
+
+            if (containerChunk != null)
+            {
+                Debug.Log(" Modifying Neighbour. " + containerChunk.ChunkData.WorldPosition);
+                meshData = Chunk.GetChunkMeshData(containerChunk.ChunkData);
+
+                containerChunk.UpdateChunk(meshData);
             }
         }
     }

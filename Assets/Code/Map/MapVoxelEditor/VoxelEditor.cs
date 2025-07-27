@@ -43,7 +43,6 @@ public class VoxelEditor : MonoBehaviour
             return;
 
         ChunkData data = _map.GetChunkDataFromWorldCoordinates(pos);
-        Debug.Log(data);
 
         if (data == null)
             return;
@@ -52,13 +51,13 @@ public class VoxelEditor : MonoBehaviour
         int y = Mathf.FloorToInt(pos.y);
         int z = Mathf.FloorToInt(pos.z);
 
-        //Debug.Log("X: " + x + ", Z: " + z);
         Vector3Int voxelPos = new Vector3Int(x, y, z);
+        voxelPos = voxelPos - data.WorldPosition;
 
-        Chunk.SetVoxel(data, voxelPos - data.WorldPosition, voxel);
+        Chunk.SetVoxel(data, voxelPos, voxel);
         data.Modified = true;
 
-        _map.ReconstructModifiedChunks();
+        _map.ReconstructModifiedChunk(data, voxelPos);
     }
 
     private void OnDisable()
