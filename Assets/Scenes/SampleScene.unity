@@ -2859,6 +2859,8 @@ MonoBehaviour:
   _networkMap: {fileID: 1100101463}
   _debugObject: {fileID: 0}
   _voxelToPlace: 2
+  _brushType: 1
+  _brushSize: 3
 --- !u!1 &1944046922
 GameObject:
   m_ObjectHideFlags: 0
@@ -3063,6 +3065,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1900850233}
+        m_TargetAssemblyTypeName: VoxelEditor, Assembly-CSharp
+        m_MethodName: RestoreMapButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 749483126}
         m_TargetAssemblyTypeName: EditorToggle, Assembly-CSharp
         m_MethodName: ToggleEditor

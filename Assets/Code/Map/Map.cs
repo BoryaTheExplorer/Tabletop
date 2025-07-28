@@ -70,9 +70,27 @@ public class Map : MonoBehaviour
             }
         }
     }
+    public void UpdateModifiedChunks()
+    {
+        ChunkRenderer containerChunk;
+        MeshData meshData;
+     
+        foreach (var chunkData in ChunkDataDictionary.Values)
+        {
+            if (!chunkData.Modified) continue;
 
+            meshData = Chunk.GetChunkMeshData(chunkData);
+            containerChunk = ChunkDictionary[chunkData.WorldPosition];
+
+            containerChunk.InitChunk(chunkData);
+            containerChunk.UpdateChunk(meshData);
+
+            chunkData.Modified = false;
+        }
+    }
     public void ReconstructModifiedChunk(ChunkData data, Vector3Int voxelPosition)
     {
+        if (data == null) return;
         ChunkRenderer containerChunk;
         MeshData meshData;
         ChunkDictionary.TryGetValue(data.WorldPosition, out containerChunk);
@@ -125,6 +143,8 @@ public class Map : MonoBehaviour
                 containerChunk.UpdateChunk(meshData);
             }
         }
+
+        data.Modified = false;
     }
     public ChunkData GetChunkDataFromWorldCoordinates(Vector3 position)
     {
@@ -134,7 +154,7 @@ public class Map : MonoBehaviour
         if (x < 0 || z < 0 || x > (MapSizeInChunks - 1) * ChunkSize || z > (MapSizeInChunks - 1) * ChunkSize)
             return null;
 
-        ChunkData containerChunk = null;
+        ChunkData containerChunk;
         ChunkDataDictionary.TryGetValue(new Vector3Int(x, 0, z), out containerChunk);
 
         return containerChunk;
@@ -142,7 +162,7 @@ public class Map : MonoBehaviour
     public VoxelType GetVoxelFromChunkCoordinates(ChunkData chunkData, int x, int y, int z)
     {
         Vector3Int pos = Chunk.ChunkPositionFromVoxelCoordinates(this, x, y, z);
-        ChunkData containerChunk = null;
+        ChunkData containerChunk;
 
         ChunkDataDictionary.TryGetValue(pos, out containerChunk);
 
