@@ -14,34 +14,41 @@ public static class Chunk
 
     private static bool InRange(ChunkData data, int index)
     {
-        return (index < 0 || index >= data.ChunkSize) ? false : true;
+        if (index < 0 || index >= data.ChunkSize)
+            return false;
+
+        return true;
     }
     private static bool InRangeHeight(ChunkData data, int index)
     {
-        return (index < 0 || index >= data.ChunkHeight) ? false : true;
+        if (index < 0 || index >= data.ChunkHeight)
+            return false;
+
+        return true;
     }
     public static VoxelType GetVoxelFromChunkCoordinates(ChunkData data, int x, int y, int z)
     {
-        if (!InRange(data, x) || !InRange(data, z) || !InRangeHeight(data, y))
+        if (InRange(data, x) && InRange(data, z) && InRangeHeight(data, y))
         {
-            return data.MapReference.GetVoxelFromChunkCoordinates(data, data.WorldPosition.x + x,
-                                                                        data.WorldPosition.y + y,
-                                                                        data.WorldPosition.z + z);
+            int index = GetIndexFromPosition(data, x, y, z);
+            return data.Voxels[index];
         }
 
-        int index = GetIndexFromPosition(data, x, y, z);
-        return data.Voxels[index];
+        return data.MapReference.GetVoxelFromChunkCoordinates(data, data.WorldPosition.x + x,
+                                                                    data.WorldPosition.y + y,
+                                                                    data.WorldPosition.z + z);
     }
-    public static void SetVoxel(ChunkData data, Vector3Int localPosition, VoxelType voxel)
+    public static bool SetVoxel(ChunkData data, Vector3Int localPosition, VoxelType voxel)
     {
         if (!InRange(data, localPosition.x) || !InRange(data, localPosition.z) || !InRangeHeight(data, localPosition.y))
-        { 
-            Debug.LogAssertion("Pizdec");
-            return;
+        {
+            Debug.Log("Failed to Set a Voxel");
+            return false;
         }
 
         int index = GetIndexFromPosition(data, localPosition.x, localPosition.y, localPosition.z);
         data.Voxels[index] = voxel;
+        return true;
     }
 
     public static int GetIndexFromPosition(ChunkData data, int x, int y, int z)

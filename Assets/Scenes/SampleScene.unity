@@ -2858,8 +2858,8 @@ MonoBehaviour:
   _map: {fileID: 325602568}
   _networkMap: {fileID: 1100101463}
   _debugObject: {fileID: 0}
-  _voxelToPlace: 2
-  _brushType: 1
+  _voxelToPlace: 3
+  _brushType: 0
   _brushSize: 3
 --- !u!1 &1944046922
 GameObject:

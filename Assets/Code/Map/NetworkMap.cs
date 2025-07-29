@@ -6,20 +6,23 @@ public class NetworkMap : NetworkBehaviour
 {
     [SerializeField] private Map _map;
 
-    public void SendUpdateMapRPC(NetworkVoxelData data)
+    public void SendEditVoxelRPC(NetworkVoxelData data)
     {
-        UpdateMapClientRPC(data);
+        EditVoxelClientRPC(data);
+    }
+    public void SendUpdateMapRPC()
+    {
+        UpdateMapClientRPC();
     }
 
     [ClientRpc()]
-    public void UpdateMapClientRPC(NetworkVoxelData data)
+    public void EditVoxelClientRPC(NetworkVoxelData data)
     {
         if (IsHost)
             return;
 
         if (_map == null) 
             return;
-
 
         ChunkData chunkData;
         _map.ChunkDataDictionary.TryGetValue(new Vector3Int(data.WorldX, data.WorldY, data.WorldZ), out chunkData);
@@ -29,11 +32,18 @@ public class NetworkMap : NetworkBehaviour
 
         Vector3Int voxelPosition = new Vector3Int(data.VoxelX, data.VoxelY, data.VoxelZ);
 
-        Debug.Log(data.Voxel);
+        if (Chunk.SetVoxel(chunkData, voxelPosition, data.Voxel))
+            chunkData.Modified = true;
+    }
+    [ClientRpc()]
+    public void UpdateMapClientRPC()
+    {
+        if (IsHost)
+            return;
 
-        Chunk.SetVoxel(chunkData, voxelPosition, data.Voxel);
-        chunkData.Modified = true;
+        if (_map == null)
+            return;
 
-        _map.ReconstructModifiedChunk(chunkData, voxelPosition);
+        _map.UpdateModifiedChunks();
     }
 }

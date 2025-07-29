@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.Mesh;
 
 public class Map : MonoBehaviour
 {
@@ -74,78 +76,49 @@ public class Map : MonoBehaviour
     {
         ChunkRenderer containerChunk;
         MeshData meshData;
+        Vector3Int position;
+        Vector3Int[] directions = new Vector3Int[]
+        {
+            Vector3Int.left,
+            Vector3Int.right,
+            Vector3Int.forward,
+            Vector3Int.back
+        };
      
         foreach (var chunkData in ChunkDataDictionary.Values)
         {
             if (!chunkData.Modified) continue;
 
             meshData = Chunk.GetChunkMeshData(chunkData);
-            containerChunk = ChunkDictionary[chunkData.WorldPosition];
+            position = chunkData.WorldPosition;
+            
+            containerChunk = ChunkDictionary[position];
 
             containerChunk.InitChunk(chunkData);
             containerChunk.UpdateChunk(meshData);
 
             chunkData.Modified = false;
+
+            UpdateNeighbourChunks(position, directions);
         }
     }
-    public void ReconstructModifiedChunk(ChunkData data, Vector3Int voxelPosition)
+
+    private void UpdateNeighbourChunks(Vector3Int origin, Vector3Int[] directions)
     {
-        if (data == null) return;
         ChunkRenderer containerChunk;
         MeshData meshData;
-        ChunkDictionary.TryGetValue(data.WorldPosition, out containerChunk);
-
-        if (containerChunk == null)
-            return;
-
-        meshData = Chunk.GetChunkMeshData(data);
-
-        containerChunk.InitChunk(data);
-        containerChunk.UpdateChunk(meshData);
-
-        if (voxelPosition.x == 0)
+        foreach (Vector3Int direction in directions)
         {
-            ChunkDictionary.TryGetValue(data.WorldPosition + new Vector3Int(-1, 0, 0) * ChunkSize, out containerChunk);
-
+            ChunkDictionary.TryGetValue(origin + direction * ChunkSize, out containerChunk);
+            
             if (containerChunk != null)
             {
                 meshData = Chunk.GetChunkMeshData(containerChunk.ChunkData);
                 containerChunk.UpdateChunk(meshData);
             }
         }
-        if (voxelPosition.x >= 15)
-        {
-            ChunkDictionary.TryGetValue(data.WorldPosition + new Vector3Int(1, 0, 0) * ChunkSize, out containerChunk);
-
-            if (containerChunk != null)
-            {
-                meshData = Chunk.GetChunkMeshData(containerChunk.ChunkData);
-                containerChunk.UpdateChunk(meshData);
-            }
-        }
-        if (voxelPosition.z == 0)
-        {
-            ChunkDictionary.TryGetValue(data.WorldPosition + new Vector3Int(0, 0, -1) * ChunkSize, out containerChunk);
-
-            if (containerChunk != null)
-            {
-                meshData = Chunk.GetChunkMeshData(containerChunk.ChunkData);
-                containerChunk.UpdateChunk(meshData);
-            }
-        }
-        if (voxelPosition.z >= 15)
-        {
-            ChunkDictionary.TryGetValue(data.WorldPosition + new Vector3Int(0, 0, 1) * ChunkSize, out containerChunk);
-
-            if (containerChunk != null)
-            {
-                meshData = Chunk.GetChunkMeshData(containerChunk.ChunkData);
-                containerChunk.UpdateChunk(meshData);
-            }
-        }
-
-        data.Modified = false;
     }
+
     public ChunkData GetChunkDataFromWorldCoordinates(Vector3 position)
     {
         int x = Mathf.FloorToInt(position.x / ChunkSize) * ChunkSize;
@@ -159,6 +132,7 @@ public class Map : MonoBehaviour
 
         return containerChunk;
     }
+
     public VoxelType GetVoxelFromChunkCoordinates(ChunkData chunkData, int x, int y, int z)
     {
         Vector3Int pos = Chunk.ChunkPositionFromVoxelCoordinates(this, x, y, z);

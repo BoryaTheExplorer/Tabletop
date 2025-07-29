@@ -2,9 +2,14 @@ using UnityEngine;
 
 public static class VoxelMapScanner
 {
+    private static Camera _camera;
+    static VoxelMapScanner()
+    {
+        _camera = Camera.main;
+    }
     public static void Scan(out Vector3 point, out Vector3 normal)
     {
-        Ray ray = Camera.main.ScreenPointToRay(GameInput.Instance.GetPointerScreenPosition());
+        Ray ray = _camera.ScreenPointToRay(GameInput.Instance.GetPointerScreenPosition());
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
