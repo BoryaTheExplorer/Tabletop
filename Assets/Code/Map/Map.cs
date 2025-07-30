@@ -8,12 +8,18 @@ using static UnityEngine.Mesh;
 public class Map : MonoBehaviour
 {
     [SerializeField] private GameObject _chunkPrefab;
+
+    public bool UsePerlin { get; private set; } = true;
+    public float NoiseScale { get; private set; } = .003f;
+    public int FloorHeight { get; private set; } = 25;
+    public VoxelType SurfaceVoxel { get; private set; } = VoxelType.Grass;
+    public VoxelType SubsurfaceVoxel { get; private set; } = VoxelType.Dirt;
     
+    [HideInInspector]
     public int MapSizeInChunks = 6;
     public int ChunkSize = 16;
     public int ChunkHeight = 100;
     public int WaterThreshold = 50;
-    public float NoiseScale = .003f;
 
     public Dictionary<Vector3Int, ChunkData> ChunkDataDictionary = new Dictionary<Vector3Int, ChunkData>();
     public Dictionary<Vector3Int, ChunkRenderer> ChunkDictionary = new Dictionary<Vector3Int, ChunkRenderer>();
@@ -55,17 +61,20 @@ public class Map : MonoBehaviour
         {
             for (int z = 0; z < data.ChunkSize; z++)
             {
-                float noiseValue = Mathf.PerlinNoise((data.WorldPosition.x + x) * NoiseScale, (data.WorldPosition.z + z) * NoiseScale);
-                int groundPosition = Mathf.RoundToInt(noiseValue * 25);
+                int groundPosition = FloorHeight;// 
 
+                if (UsePerlin)
+                {
+                    float noiseValue = Mathf.PerlinNoise((data.WorldPosition.x + x) * NoiseScale, (data.WorldPosition.z + z) * NoiseScale);
+                    groundPosition = Mathf.RoundToInt(noiseValue * FloorHeight);
+                }
                 for (int y = 0; y < data.ChunkHeight; y++)
                 {
-                    VoxelType voxelType = VoxelType.Dirt;
-                    if (y > groundPosition)
+                    VoxelType voxelType = SubsurfaceVoxel;
                     if (y > groundPosition)
                         voxelType = VoxelType.Air;
                     if (y == groundPosition)
-                        voxelType = VoxelType.Grass;
+                        voxelType = SurfaceVoxel;
 
                     Chunk.SetVoxel(data, new Vector3Int(x, y, z), voxelType);
                 }
@@ -148,5 +157,26 @@ public class Map : MonoBehaviour
         return Chunk.GetVoxelFromChunkCoordinates(containerChunk, voxelInChunkCoordinates.x,
                                                                   voxelInChunkCoordinates.y,
                                                                   voxelInChunkCoordinates.z);
+    }
+
+    public void SetSurfaceVoxel(VoxelType voxel)
+    {
+        SurfaceVoxel = voxel;
+    }
+    public void SetSubsurfaceVoxel(VoxelType voxel)
+    {
+        SubsurfaceVoxel = voxel;
+    }
+    public void SetUsePerlin(bool use)
+    {
+        UsePerlin = use;
+    }
+    public void SetPerlinScale(float perlin)
+    {
+        NoiseScale = perlin;
+    }
+    public void SetFloorHeight(int floorHeight)
+    {
+        FloorHeight = floorHeight;
     }
 }

@@ -14,7 +14,6 @@ public class VoxelEditor : MonoBehaviour
     [SerializeField][Range(1, 5)] private int _brushSize;
 
     private Dictionary<Vector3Int, VoxelType> _history = new Dictionary<Vector3Int, VoxelType>();
-    private Dictionary<Vector3Int, VoxelType> abababa = new();
     private void OnEnable()
     {
         _history.Clear();
@@ -65,11 +64,6 @@ public class VoxelEditor : MonoBehaviour
 
         UpdateMap();
     }
-    //OPTIMIZE 
-    //DONT UPDATE MAP RIGHT AWAY 
-    //MODIFY VOXELS AND THEN CALL MAP UPDATE
-    //SEND PIECES OF DATA AND THEN UPDATE CLIENTS
-    //SAME GOES FOR RESTORE
     private void SearchAndEditVoxelAt(VoxelEditorAction action, VoxelType voxel, Vector3 hitPosition, Vector3 hitNormal)
     {
         if (action == VoxelEditorAction.Place && _brushType == VoxelEditorBrushType.Single)
@@ -111,7 +105,6 @@ public class VoxelEditor : MonoBehaviour
         if (!_history.ContainsKey(voxelWorldPosition) && saveInHistory)
         {
             VoxelType type = _map.GetVoxelFromChunkCoordinates(chunkData, voxelWorldPosition.x, voxelWorldPosition.y, voxelWorldPosition.z);
-            Debug.Log("Added: " + voxelWorldPosition + ", " + type + ", " + chunkData.WorldPosition);
             _history.Add(voxelWorldPosition, type);
         }
 
@@ -151,7 +144,6 @@ public class VoxelEditor : MonoBehaviour
             if (data == null)
                 continue;
             voxelPos = kvp.Key - data.WorldPosition;
-            Debug.Log(kvp.Key + "| Voxel Position in History, " + data.WorldPosition + "| Chunk Position, " + kvp.Value + "| Voxel");
 
             EditVoxelAt(kvp.Value, voxelPos, data.WorldPosition, false);
         }
