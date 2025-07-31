@@ -15,8 +15,7 @@ public class Map : MonoBehaviour
     public VoxelType SurfaceVoxel { get; private set; } = VoxelType.Grass;
     public VoxelType SubsurfaceVoxel { get; private set; } = VoxelType.Dirt;
     
-    [HideInInspector]
-    public int MapSizeInChunks = 6;
+    public int MapSizeInChunks = 4;
     public int ChunkSize = 16;
     public int ChunkHeight = 100;
     public int WaterThreshold = 50;

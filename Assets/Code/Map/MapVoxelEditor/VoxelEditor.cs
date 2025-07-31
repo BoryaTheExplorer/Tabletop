@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Splines;
 using static UnityEditor.PlayerSettings;
 
@@ -33,6 +34,8 @@ public class VoxelEditor : MonoBehaviour
 
     private async Task Paint(VoxelEditorAction action, VoxelType voxel)
     {
+        if (GameInput.Instance.IsPointerOverUI())
+            return;
         await Awaitable.NextFrameAsync();
 
         Vector3 pos;

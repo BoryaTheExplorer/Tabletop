@@ -1,9 +1,14 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class GameInput : MonoBehaviour
 {
     public static GameInput Instance {  get; private set; }
+    [SerializeField] private GraphicRaycaster _raycaster;
+
     private InputSystem_Actions _inputActions;
 
     public event Action OnClickStarted;
@@ -117,6 +122,18 @@ public class GameInput : MonoBehaviour
     public Vector2 GetPointerScreenPosition()
     {
         return _inputActions.Player.Pointer.ReadValue<Vector2>();
+    }
+    public bool IsPointerOverUI()
+    {
+        PointerEventData data = new PointerEventData(EventSystem.current)
+        {
+            position = GetPointerScreenPosition()
+        };
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        _raycaster.Raycast(data, results);
+
+        return results.Count > 0;
     }
 
     private void OnDisable()
