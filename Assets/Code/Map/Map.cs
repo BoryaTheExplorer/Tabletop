@@ -23,6 +23,37 @@ public class Map : MonoBehaviour
     public Dictionary<Vector3Int, ChunkData> ChunkDataDictionary = new Dictionary<Vector3Int, ChunkData>();
     public Dictionary<Vector3Int, ChunkRenderer> ChunkDictionary = new Dictionary<Vector3Int, ChunkRenderer>();
 
+    private void Start()
+    {
+        MapRegister.SetMap(this);
+    }
+    //SYNC USING CUSTOM MESSAGE
+    public void LoadMapLayout(MapData map)
+    {
+        ChunkDataDictionary.Clear();
+        ChunkDataDictionary = map.ChunkDataDicitonary;
+
+        foreach (var chunk in ChunkDictionary.Values) 
+        {
+            Destroy(chunk.gameObject);
+        }
+        ChunkDictionary.Clear();
+
+        BuildChunks();
+    }
+
+    public void BuildChunks()
+    {
+        foreach (ChunkData data in ChunkDataDictionary.Values)
+        {
+            MeshData meshData = Chunk.GetChunkMeshData(data);
+            GameObject chunkObject = Instantiate(_chunkPrefab, data.WorldPosition, Quaternion.identity);
+            ChunkRenderer chunkRenderer = chunkObject.GetComponent<ChunkRenderer>();
+            ChunkDictionary.Add(data.WorldPosition, chunkRenderer);
+            chunkRenderer.InitChunk(data);
+            chunkRenderer.UpdateChunk(meshData);
+        }
+    }
     public void GenerateMap()
     {
         ChunkDataDictionary.Clear();
@@ -43,15 +74,7 @@ public class Map : MonoBehaviour
             }
         }
 
-        foreach (ChunkData data in ChunkDataDictionary.Values)
-        {
-            MeshData meshData = Chunk.GetChunkMeshData(data);
-            GameObject chunkObject = Instantiate(_chunkPrefab, data.WorldPosition, Quaternion.identity);
-            ChunkRenderer chunkRenderer = chunkObject.GetComponent<ChunkRenderer>();
-            ChunkDictionary.Add(data.WorldPosition, chunkRenderer);
-            chunkRenderer.InitChunk(data);
-            chunkRenderer.UpdateChunk(meshData);
-        }
+        BuildChunks();
     }
 
     private void GenerateVoxels(ChunkData data)

@@ -3,8 +3,14 @@ using UnityEngine;
 
 public static class MapRegister
 {
+    public static Map Map { get; private set; }
     public static Dictionary<string, MapData> SavedMaps { get; private set; } = new();
 
+    public static void SetMap(Map map)
+    {
+        if (Map == null)
+            Map = map;
+    }
     public static MapData GetMapData(string name)
     {
         MapData mapData;
@@ -13,6 +19,15 @@ public static class MapRegister
             Debug.Log($"Map '{name}' is missing in the Register.");
 
         return mapData;
+    }
+    public static void LoadMapData(string name)
+    {
+        MapData data = GetMapData(name);
+
+        if (data == null)
+            return;
+
+        Map.LoadMapLayout(data);
     }
     public static bool RegisterMapData(MapData mapData)
     {
