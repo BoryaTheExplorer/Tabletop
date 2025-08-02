@@ -1595,7 +1595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _chunkPrefab: {fileID: 4159894007724575814, guid: c808911d2fd000840b1155d7886970d6, type: 3}
-  MapSizeInChunks: 12
+  MapSizeInChunks: 5
   ChunkSize: 16
   ChunkHeight: 100
   WaterThreshold: 50

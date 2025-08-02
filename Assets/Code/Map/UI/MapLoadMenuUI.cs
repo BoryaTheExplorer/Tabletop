@@ -21,6 +21,7 @@ public class MapLoadMenuUI : MonoBehaviour
             savedMaps.Add(ui);
         }
 
+        _currentSaves = savedMaps;
     }
     private void Clear()
     {

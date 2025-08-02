@@ -25,12 +25,12 @@ public class NetworkMap : NetworkBehaviour
             return;
 
         ChunkData chunkData;
-        _map.ChunkDataDictionary.TryGetValue(new Vector3Int(data.WorldX, data.WorldY, data.WorldZ), out chunkData);
+        _map.ChunkDataDictionary.TryGetValue(data.ChunkPos.ToVector3Int(), out chunkData);
 
         if (chunkData == null)
             return;
 
-        Vector3Int voxelPosition = new Vector3Int(data.VoxelX, data.VoxelY, data.VoxelZ);
+        Vector3Int voxelPosition = data.VoxelPos.ToVector3Int();
 
         if (Chunk.SetVoxel(chunkData, voxelPosition, data.Voxel))
             chunkData.Modified = true;

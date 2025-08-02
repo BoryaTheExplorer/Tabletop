@@ -6,16 +6,30 @@ public static class MapRegister
     public static Map Map { get; private set; }
     public static Dictionary<string, MapData> SavedMaps { get; private set; } = new();
 
-    public static void SetMap(Map map)
+    public static void Init(Map map)
     {
-        if (Map == null)
-            Map = map;
+        Map = map;
+        LoadAllMaps();
+    }
+    public static void LoadAllMaps()
+    {
+        List<SerializableMapData> maps = SaveAndLoad.LoadAll<SerializableMapData>("Maps");
+
+        if (maps.Count == 0)
+            return;
+
+        MapData data;
+        foreach (SerializableMapData mapData in maps)
+        {
+            data = mapData.ToMapData(Map);
+            SavedMaps.Add(data.Name, data);
+        }
     }
     public static MapData GetMapData(string name)
     {
         MapData mapData;
         
-        if (SavedMaps.TryGetValue(name, out mapData))
+        if (!SavedMaps.TryGetValue(name, out mapData))
             Debug.Log($"Map '{name}' is missing in the Register.");
 
         return mapData;
@@ -44,6 +58,25 @@ public static class MapRegister
         }
         
         SavedMaps.Add(mapData.Name, mapData);
+        
+        List<SerializableChunkData> data = new();
+        foreach (var chunkData in mapData.ChunkDataDicitonary.Values)
+        {
+            data.Add(new SerializableChunkData()
+            {
+                Voxels = chunkData.Voxels,
+                ChunkHeight = chunkData.ChunkHeight,
+                ChunkSize = chunkData.ChunkSize,
+                WorldPosition = chunkData.WorldPosition,
+            });
+        }
+
+        SaveAndLoad.Save<SerializableMapData>(new SerializableMapData()
+        {
+            Data = data,
+            Name = mapData.Name
+        }, 
+        $"Maps/{mapData.Name}", $"{mapData.Name}_MapData");
         return true;
     }
     public static bool RemoveMapData(string name)

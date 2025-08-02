@@ -118,13 +118,18 @@ public class VoxelEditor : MonoBehaviour
         {
             Voxel = voxel,
 
-            WorldX = chunkData.WorldPosition.x,
-            WorldY = chunkData.WorldPosition.y,
-            WorldZ = chunkData.WorldPosition.z,
-
-            VoxelX = localPosition.x,
-            VoxelY = localPosition.y,
-            VoxelZ = localPosition.z
+            ChunkPos = new NetworkVector3IntWrapper()
+            {
+                X = chunkData.WorldPosition.x,
+                Y = chunkData.WorldPosition.y,
+                Z = chunkData.WorldPosition.z
+            },
+            VoxelPos = new NetworkVector3IntWrapper()
+            {
+                X = localPosition.x,
+                Y = localPosition.y,
+                Z = localPosition.z
+            }
         });
     
     }

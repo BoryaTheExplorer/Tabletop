@@ -15,7 +15,7 @@ public class Map : MonoBehaviour
     public VoxelType SurfaceVoxel { get; private set; } = VoxelType.Grass;
     public VoxelType SubsurfaceVoxel { get; private set; } = VoxelType.Dirt;
     
-    public int MapSizeInChunks = 4;
+    public int MapSizeInChunks = 3;
     public int ChunkSize = 16;
     public int ChunkHeight = 100;
     public int WaterThreshold = 50;
@@ -25,7 +25,7 @@ public class Map : MonoBehaviour
 
     private void Start()
     {
-        MapRegister.SetMap(this);
+        MapRegister.Init(this);
     }
     //SYNC USING CUSTOM MESSAGE
     public void LoadMapLayout(MapData map)
@@ -73,8 +73,11 @@ public class Map : MonoBehaviour
                 ChunkDataDictionary.Add(data.WorldPosition, data);
             }
         }
-
         BuildChunks();
+
+        Debug.Log("Chunks: " + ChunkDataDictionary.Keys.Count);
+        foreach (Vector3Int pos in ChunkDataDictionary.Keys)
+            Debug.Log(pos.ToString());
     }
 
     private void GenerateVoxels(ChunkData data)

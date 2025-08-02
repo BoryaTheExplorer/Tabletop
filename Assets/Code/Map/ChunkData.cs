@@ -26,4 +26,8 @@ public class ChunkData
     {
         Voxels = new VoxelType[ChunkSize * ChunkSize * ChunkHeight];
     }
+    public void SetVoxels(VoxelType[] voxels)
+    {
+        Voxels = voxels;
+    }
 }
