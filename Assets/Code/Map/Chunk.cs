@@ -55,6 +55,10 @@ public static class Chunk
     {
         return x + data.ChunkSize * y + data.ChunkSize * data.ChunkHeight * z;
     }
+    public static int GetIndexFromPosition(int chunkSize, int chunkHeight, int x, int y, int z)
+    {
+        return x + chunkSize * y + chunkSize * chunkHeight * z;
+    }
 
     public static Vector3Int GetVoxelCoordinatesInChunkSystem(ChunkData data, Vector3Int pos)
     {

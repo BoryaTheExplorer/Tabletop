@@ -35,6 +35,7 @@ public class NetworkMap : NetworkBehaviour
         if (Chunk.SetVoxel(chunkData, voxelPosition, data.Voxel))
             chunkData.Modified = true;
     }
+
     [ClientRpc()]
     public void UpdateMapClientRPC()
     {

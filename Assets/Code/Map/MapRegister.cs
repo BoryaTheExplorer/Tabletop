@@ -65,8 +65,6 @@ public static class MapRegister
             data.Add(new SerializableChunkData()
             {
                 Voxels = chunkData.Voxels,
-                ChunkHeight = chunkData.ChunkHeight,
-                ChunkSize = chunkData.ChunkSize,
                 WorldPosition = chunkData.WorldPosition,
             });
         }
