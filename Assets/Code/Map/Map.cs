@@ -23,10 +23,6 @@ public class Map : MonoBehaviour
     public Dictionary<Vector3Int, ChunkData> ChunkDataDictionary = new Dictionary<Vector3Int, ChunkData>();
     public Dictionary<Vector3Int, ChunkRenderer> ChunkDictionary = new Dictionary<Vector3Int, ChunkRenderer>();
 
-    private void Start()
-    {
-        MapRegister.Init(this);
-    }
     //SYNC USING CUSTOM MESSAGE
     public void LoadMapLayout(MapData map)
     {

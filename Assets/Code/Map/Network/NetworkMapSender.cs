@@ -7,14 +7,43 @@ using UnityEngine;
 
 public class NetworkMapSender : NetworkBehaviour
 {
+    [SerializeField] private Map _map;
+
     private const int MAX_PAYLOAD = 1200;
-    private const float ACK_TIMEOUT = 5f;
+    private const float ACK_TIMEOUT = 15f;
 
     private readonly Dictionary<Vector3Int, Coroutine> _pendingAcks = new Dictionary<Vector3Int, Coroutine>();
 
+    public override void OnNetworkSpawn()
+    {
+        if (IsServer)
+            NetworkManager.Singleton.OnClientConnectedCallback += (clientId) =>
+            {
+                if (clientId == NetworkManager.Singleton.LocalClientId)
+                    return;
+
+                if (MapRegister.Map == null)
+                    MapRegister.Init(_map);
+
+                Dictionary<string, List<SerializableChunkData>> maps = new Dictionary<string, List<SerializableChunkData>>();
+
+                foreach (var map in MapRegister.SavedMaps){
+                    maps[map.Key] = new List<SerializableChunkData>();
+
+                    foreach (var chunkData in map.Value.ChunkDataDicitonary.Values)
+                    {
+                        maps[map.Key].Add(new SerializableChunkData(chunkData));
+                    }
+
+                    SendMapToClient(clientId, maps[map.Key], map.Key);
+                    Debug.Log("Sending stuff");
+                }
+            };
+    }
+
     public void SendMapKeyToClient(ulong clientId, string mapKey)
     {
-        using var writer = new FastBufferWriter(FastBufferWriter.GetWriteSize(mapKey, true), Allocator.Temp);
+        using var writer = new FastBufferWriter(FastBufferWriter.GetWriteSize(mapKey, false), Allocator.Temp);
         writer.WriteValueSafe(mapKey);
         NetworkManager.Singleton.CustomMessagingManager.SendNamedMessage("OnReceiveMapKey", clientId, writer);
     }
@@ -22,8 +51,8 @@ public class NetworkMapSender : NetworkBehaviour
     {
         SendMapKeyToClient(clientId, mapKey);
      
-        int chunkSize = MapRegister.Map.ChunkSize;
-        int chunkHeight = MapRegister.Map.ChunkHeight;
+        int chunkSize = _map.ChunkSize;
+        int chunkHeight = _map.ChunkHeight;
 
         foreach (var chunk in chunksData)
         {

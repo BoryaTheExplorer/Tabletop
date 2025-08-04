@@ -4,7 +4,7 @@ using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
 
-public class MapReceiver : MonoBehaviour
+public class NetworkMapReceiver : NetworkBehaviour
 {
     private class Assembly
     {
@@ -40,18 +40,34 @@ public class MapReceiver : MonoBehaviour
 
     }
 
+    public override void OnNetworkSpawn()
+    {
+        if (IsServer)
+        {
+            //Destroy(gameObject);
+            Debug.Log("Server Removes Map Receiver");
+            return;
+        }
+
+        NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler("OnReceiveMapKey", SetCurrentKey);
+        NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler("OnReceiveChunk", HandleSlice);
+        Debug.Log("Subbed to messsages");
+    }
+
     private readonly Dictionary<string, Dictionary<Vector3Int, Assembly>> _inflight = new Dictionary<string, Dictionary<Vector3Int, Assembly>>();
     private readonly Dictionary<string, Dictionary<Vector3Int, ChunkData>> _mapData = new Dictionary<string, Dictionary<Vector3Int, ChunkData>>();
     private string _mapKey = string.Empty;
     private void Start()
     {
-        NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler("OnReceiveMapKey", SetCurrentKey);
-        NetworkManager.Singleton.CustomMessagingManager.RegisterNamedMessageHandler("OnReceiveChunk", HandleSlice);
+        
     }
 
     private void SetCurrentKey(ulong senderId, FastBufferReader reader)
     {
         reader.ReadValueSafe(out _mapKey);
+        _inflight[_mapKey] = new Dictionary<Vector3Int, Assembly>();
+        _mapData[_mapKey] = new Dictionary<Vector3Int, ChunkData>();
+        Debug.Log($"Id: {OwnerClientId}, Received Key: {_mapKey}");
     }
     private void HandleSlice(ulong senderId, FastBufferReader reader)
     {
@@ -79,6 +95,7 @@ public class MapReceiver : MonoBehaviour
 
         asm.Chunks[index] = data;
         asm.Received++;
+        Debug.Log(_mapKey + " | Received: " + asm.Received);
 
         if (asm.IsComplete)
         {
@@ -87,23 +104,27 @@ public class MapReceiver : MonoBehaviour
             var chunk = SerializableChunkData.DeserializeFromBytes(raw, MapRegister.Map.ChunkSize, MapRegister.Map.ChunkHeight);
 
             ChunkData chunkData = chunk.ToChunkData(MapRegister.Map);
-
-            GetComponent<NetworkMapSender>().ClientAckChunkServerRpc(x, y, z);
+            _mapData[_mapKey].Add(position, chunkData);
+            transform.parent.GetComponentInChildren<NetworkMapSender>().ClientAckChunkServerRpc(x, y, z);
 
             inflightMap.Remove(position);
-            if (inflightMap.Count == 0)
-            {
-                HandleMap();
-            }
+
+            HandleMap();
         }
     }
 
     private void HandleMap()
     {
         MapData mapData = new MapData(new Dictionary<Vector3Int, ChunkData>(_mapData[_mapKey]), _mapKey);
-        MapRegister.SavedMaps.Add(_mapKey, mapData);
+        int size = MapRegister.Map.MapSizeInChunks * MapRegister.Map.MapSizeInChunks;
 
-        _mapData.Clear();
-        _mapKey = string.Empty;
+
+        if (_mapData[_mapKey].Values.Count == size)
+        {
+            MapRegister.SavedMaps.Add(_mapKey, mapData);
+
+            _mapData.Clear();
+            _mapKey = string.Empty;
+        }
     }
 }

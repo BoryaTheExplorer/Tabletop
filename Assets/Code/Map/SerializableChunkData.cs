@@ -8,6 +8,12 @@ public struct SerializableChunkData
     public VoxelType[] Voxels;
     public Vector3Int WorldPosition;
 
+    public SerializableChunkData(ChunkData chunkData)
+    {
+        Voxels = chunkData.Voxels;
+        WorldPosition = chunkData.WorldPosition;
+    }
+
     public ChunkData ToChunkData(Map mapRef)
     {
         ChunkData data = new ChunkData(mapRef.ChunkSize, mapRef.ChunkHeight, mapRef, WorldPosition);
@@ -43,8 +49,9 @@ public struct SerializableChunkData
     public static SerializableChunkData DeserializeFromBytes(byte[] data, int chunkSize, int chunkHeight)
     {
         var chunk = new SerializableChunkData();
+        chunk.Voxels = new VoxelType[chunkSize * chunkSize * chunkHeight];
 
-        using var ms = new MemoryStream();
+        using var ms = new MemoryStream(data);
         using var reader = new BinaryReader(ms);
     
         for (int x = 0; x < chunkSize; x++)

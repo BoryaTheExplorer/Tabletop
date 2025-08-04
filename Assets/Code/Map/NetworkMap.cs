@@ -5,7 +5,11 @@ using UnityEngine;
 public class NetworkMap : NetworkBehaviour
 {
     [SerializeField] private Map _map;
-
+    public override void OnNetworkSpawn()
+    {
+        MapRegister.Init(_map);
+        MapRegister.NetworkMap = this;
+    }
     public void SendEditVoxelRPC(NetworkVoxelData data)
     {
         EditVoxelClientRPC(data);
@@ -34,6 +38,14 @@ public class NetworkMap : NetworkBehaviour
 
         if (Chunk.SetVoxel(chunkData, voxelPosition, data.Voxel))
             chunkData.Modified = true;
+    }
+    [ClientRpc()]
+    public void LoadFromRegisterClientRpc(string mapKey)
+    {
+        if (IsServer)
+            return;
+
+        MapRegister.LoadMapData(mapKey);
     }
 
     [ClientRpc()]

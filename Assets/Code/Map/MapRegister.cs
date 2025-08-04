@@ -1,15 +1,21 @@
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
 public static class MapRegister
 {
     public static Map Map { get; private set; }
+    public static NetworkMap NetworkMap { get; set; }
     public static Dictionary<string, MapData> SavedMaps { get; private set; } = new();
 
     public static void Init(Map map)
     {
+        if (Map != null)
+            return;
+
         Map = map;
-        LoadAllMaps();
+        if (NetworkManager.Singleton.IsServer)
+            LoadAllMaps();
     }
     public static void LoadAllMaps()
     {
@@ -74,7 +80,7 @@ public static class MapRegister
             Data = data,
             Name = mapData.Name
         }, 
-        $"Maps/{mapData.Name}", $"{mapData.Name}_MapData");
+        $"Maps", $"{mapData.Name}_MapData");
         return true;
     }
     public static bool RemoveMapData(string name)

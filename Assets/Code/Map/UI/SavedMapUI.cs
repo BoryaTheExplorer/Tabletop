@@ -14,6 +14,7 @@ public class SavedMapUI : MonoBehaviour
     public void Load()
     {
         MapRegister.LoadMapData(MapName);
+        MapRegister.NetworkMap.LoadFromRegisterClientRpc(MapName);
     }
     public void Remove()
     {
