@@ -38,7 +38,7 @@ public static class MapRegister
         if (!SavedMaps.TryGetValue(name, out mapData))
             Debug.Log($"Map '{name}' is missing in the Register.");
 
-        return mapData;
+        return new MapData(mapData);
     }
     public static void LoadMapData(string name)
     {

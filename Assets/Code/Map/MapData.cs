@@ -11,4 +11,9 @@ public class MapData
         ChunkDataDicitonary = chunkDataDicitonary;
         Name = name;
     }
+    public MapData(MapData mapData)
+    {
+        ChunkDataDicitonary = new Dictionary<Vector3Int, ChunkData>(mapData.ChunkDataDicitonary);
+        Name = mapData.Name;
+    }
 }
