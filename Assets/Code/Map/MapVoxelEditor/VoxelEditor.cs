@@ -10,9 +10,14 @@ public class VoxelEditor : MonoBehaviour
     [SerializeField] private Map _map;
     [SerializeField] private NetworkMap _networkMap;
     [SerializeField] private GameObject _debugObject;
-    [SerializeField] private VoxelType _voxelToPlace;
+    [SerializeField] private VoxelType _voxelToPaint;
     [SerializeField] private VoxelEditorBrushType _brushType;
-    [SerializeField][Range(1, 5)] private int _brushSize;
+    [SerializeField][Range(1, 7)] private int _brushSize;
+    public int BrushSizeMin { get; private set; } = 1;
+    public int BrushSizeMax { get; private set; } = 7;
+    public int BrushSize { get { return _brushSize; } }
+    public VoxelEditorBrushType BrushType { get { return _brushType; } }
+    public VoxelType VoxelToPaint {  get { return _voxelToPaint; } }
 
     private Dictionary<Vector3Int, VoxelType> _history = new Dictionary<Vector3Int, VoxelType>();
     private void OnEnable()
@@ -29,7 +34,7 @@ public class VoxelEditor : MonoBehaviour
 
     private void GameInput_OnClickPerformed()
     {
-        _ = Paint(VoxelEditorAction.Place, _voxelToPlace);
+        _ = Paint(VoxelEditorAction.Place, _voxelToPaint);
     }
 
     private async Task Paint(VoxelEditorAction action, VoxelType voxel)
@@ -162,6 +167,19 @@ public class VoxelEditor : MonoBehaviour
     {
         _map.UpdateModifiedChunks();
         _networkMap.SendUpdateMapRPC();
+    }
+
+    public void SetBrushType(VoxelEditorBrushType brushType)
+    {
+        _brushType = brushType;
+    }
+    public void SetVoxelToPaint(VoxelType voxel)
+    {
+        _voxelToPaint = voxel;
+    }
+    public void SetBrushSize(int size)
+    {
+        _brushSize = size;
     }
 
     private void OnDisable()
