@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DiceRoller : MonoBehaviour
 {
+    [SerializeField] private float _minAngular;
+    [SerializeField] private float _maxAngular;
+
     [SerializeField] private List<DiceType> _diceTypes = new List<DiceType>();
     [SerializeField] private List<GameObject> _prefabs = new List<GameObject>();
     private Dictionary<DiceType, GameObject> _dicePrefabs = new Dictionary<DiceType, GameObject>();
@@ -40,8 +43,21 @@ public class DiceRoller : MonoBehaviour
         networkDie.Spawn();
 
         Dice dice = die.GetComponent<Dice>();
-        dice.Roll(Vector3.zero, Vector3.up);
+        dice.Roll(Vector3.zero, GetRandomAngularVelocity(_minAngular, _maxAngular));
 
         return dice;
+    }
+
+    private Vector3 GetRandomAngularVelocity(float min, float max)
+    {
+        float x = Random.Range(min, max);
+        float y = Random.Range(min, max);
+        float z = Random.Range(min, max);
+
+        Vector3 angular = new Vector3(x, y, z);
+
+        Debug.Log(angular);
+
+        return angular;
     }
 }

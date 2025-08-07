@@ -67,7 +67,7 @@ public class Dice : NetworkBehaviour
         _rigidBody.angularVelocity = Vector3.zero;
 
         _rigidBody.AddForce(force, ForceMode.Impulse);
-        _rigidBody.AddForce(torque, ForceMode.Impulse);
+        _rigidBody.AddTorque(torque, ForceMode.Impulse);
 
         _rolling = true;
         _timer = _countdown;
