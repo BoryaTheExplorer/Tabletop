@@ -3,6 +3,50 @@
   "WorkspaceRootPath": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\network\\networkmapsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\network\\networkmapsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|c:\\users\\borys\\desktop\\projects\\boryatabletop\\assets\\code\\chat\\network\\networkmessagesender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\chat\\network\\networkmessagesender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\chat\\network\\networkmessagereceiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\chat\\network\\networkmessagereceiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\network\\networkmapreceiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\network\\networkmapreceiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|c:\\users\\borys\\desktop\\projects\\boryatabletop\\assets\\code\\chat\\messages\\messagecontent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\chat\\messages\\messagecontent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|c:\\users\\borys\\desktop\\projects\\boryatabletop\\assets\\code\\chat\\messages\\plainmessagedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\chat\\messages\\plainmessagedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|c:\\users\\borys\\desktop\\projects\\boryatabletop\\assets\\code\\chat\\messages\\rollmessagedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\chat\\messages\\rollmessagedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|c:\\users\\borys\\desktop\\projects\\boryatabletop\\assets\\code\\chat\\messages\\imessagedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\chat\\messages\\imessagedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\chat\\messages\\messagetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\chat\\messages\\messagetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\dice\\ui\\dicerollerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\dice\\ui\\dicerollerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\chat\\messages\\rolltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\chat\\messages\\rolltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\dice\\diceroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\dice\\diceroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,60 +55,12 @@
       "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\dice\\dicetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\dice\\ui\\dicerollerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\dice\\ui\\dicerollerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|c:\\users\\borys\\desktop\\projects\\boryatabletop\\assets\\code\\dice\\dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\dice\\dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\dice\\dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\network\\networkmapreceiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\network\\networkmapreceiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\ui\\brushsettingsui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\ui\\brushsettingsui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\NetworkMap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:Assets\\Code\\Map\\NetworkMap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\serializablemapdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\serializablemapdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\helpers\\compressor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\helpers\\compressor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\ui\\savedmapui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\ui\\savedmapui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\serializablechunkdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\serializablechunkdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\helpers\\saveandload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\helpers\\saveandload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\mapregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\mapregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\network\\networkmapsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\network\\networkmapsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\network\\networkvoxeldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\network\\networkvoxeldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\mapvoxeleditor\\voxeleditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -73,58 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\ui\\mapconfigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\ui\\mapconfigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\mapdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\mapdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\grid\\networkgrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\grid\\networkgrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\chunkdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\chunkdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\user\\gameinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\user\\gameinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\ui\\maploadmenuui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\ui\\maploadmenuui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\ui\\mapsavemenuui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\ui\\mapsavemenuui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\network\\networkvector3intwrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\network\\networkvector3intwrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\voxeltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\voxeltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\mapvoxeleditor\\voxelmapscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\mapvoxeleditor\\voxelmapscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\chunkrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\chunkrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\grid\\tiledataarray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\grid\\tiledataarray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\helpers\\connectortest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\helpers\\connectortest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -134,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -142,7 +86,136 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NetworkMessageSender.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Network\\NetworkMessageSender.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Network\\NetworkMessageSender.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Network\\NetworkMessageSender.cs",
+              "RelativeToolTip": "Assets\\Code\\Chat\\Network\\NetworkMessageSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T12:26:10.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NetworkMapSender.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Network\\NetworkMapSender.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Map\\Network\\NetworkMapSender.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Network\\NetworkMapSender.cs",
+              "RelativeToolTip": "Assets\\Code\\Map\\Network\\NetworkMapSender.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T12:17:12.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "NetworkMessageReceiver.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Network\\NetworkMessageReceiver.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Network\\NetworkMessageReceiver.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Network\\NetworkMessageReceiver.cs",
+              "RelativeToolTip": "Assets\\Code\\Chat\\Network\\NetworkMessageReceiver.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T11:37:49.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NetworkMapReceiver.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Network\\NetworkMapReceiver.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Map\\Network\\NetworkMapReceiver.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Network\\NetworkMapReceiver.cs",
+              "RelativeToolTip": "Assets\\Code\\Map\\Network\\NetworkMapReceiver.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAcwDMAAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T14:26:29.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IMessageData.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\IMessageData.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Messages\\IMessageData.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\IMessageData.cs",
+              "RelativeToolTip": "Assets\\Code\\Chat\\Messages\\IMessageData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T12:14:41.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RollMessageData.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\RollMessageData.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Messages\\RollMessageData.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\RollMessageData.cs",
+              "RelativeToolTip": "Assets\\Code\\Chat\\Messages\\RollMessageData.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T12:03:04.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlainMessageData.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\PlainMessageData.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Messages\\PlainMessageData.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\PlainMessageData.cs",
+              "RelativeToolTip": "Assets\\Code\\Chat\\Messages\\PlainMessageData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T12:03:03.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MessageContent.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\MessageContent.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Messages\\MessageContent.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\MessageContent.cs",
+              "RelativeToolTip": "Assets\\Code\\Chat\\Messages\\MessageContent.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAQwBgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T11:52:21.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MessageType.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\MessageType.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Messages\\MessageType.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\MessageType.cs",
+              "RelativeToolTip": "Assets\\Code\\Chat\\Messages\\MessageType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T09:46:57.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RollType.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\RollType.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Messages\\RollType.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\RollType.cs",
+              "RelativeToolTip": "Assets\\Code\\Chat\\Messages\\RollType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T09:48:14.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "DiceRollerUI.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Dice\\UI\\DiceRollerUI.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Dice\\UI\\DiceRollerUI.cs",
@@ -150,12 +223,11 @@
               "RelativeToolTip": "Assets\\Code\\Dice\\UI\\DiceRollerUI.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T13:30:52.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T13:30:52.963Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "DiceType.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Dice\\DiceType.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Dice\\DiceType.cs",
@@ -163,12 +235,11 @@
               "RelativeToolTip": "Assets\\Code\\Dice\\DiceType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T13:12:03.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T13:12:03.952Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "DiceRoller.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Dice\\DiceRoller.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Dice\\DiceRoller.cs",
@@ -176,12 +247,11 @@
               "RelativeToolTip": "Assets\\Code\\Dice\\DiceRoller.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAwwDMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T13:10:39.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T13:10:39.623Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "Dice.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Dice\\Dice.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Dice\\Dice.cs",
@@ -189,24 +259,11 @@
               "RelativeToolTip": "Assets\\Code\\Dice\\Dice.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAowEUAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T11:54:40.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T11:54:40.342Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NetworkMapReceiver.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Network\\NetworkMapReceiver.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\Network\\NetworkMapReceiver.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Network\\NetworkMapReceiver.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\Network\\NetworkMapReceiver.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHYAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T14:26:29.885Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "BrushSettingsUI.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\UI\\BrushSettingsUI.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\UI\\BrushSettingsUI.cs",
@@ -218,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "MapConfigUI.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\UI\\MapConfigUI.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\UI\\MapConfigUI.cs",
@@ -230,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "VoxelEditor.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\VoxelEditor.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\MapVoxelEditor\\VoxelEditor.cs",
@@ -239,282 +296,6 @@
               "ViewState": "AgIAABAAAAAAAAAAAAAuwBgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-26T17:06:27.064Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "NetworkMapSender.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Network\\NetworkMapSender.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\Network\\NetworkMapSender.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Network\\NetworkMapSender.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\Network\\NetworkMapSender.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAIAwwG8AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T12:17:12.907Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MapRegister.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapRegister.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\MapRegister.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapRegister.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\MapRegister.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAwBsAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T15:50:12.797Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SerializableChunkData.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\SerializableChunkData.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\SerializableChunkData.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\SerializableChunkData.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\SerializableChunkData.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAIwDEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T13:23:16.098Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Compressor.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Helpers\\Compressor.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Helpers\\Compressor.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Helpers\\Compressor.cs",
-              "RelativeToolTip": "Assets\\Code\\Helpers\\Compressor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T13:31:19.047Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SerializableMapData.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\SerializableMapData.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\SerializableMapData.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\SerializableMapData.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\SerializableMapData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T13:28:17.229Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "MapData.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapData.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\MapData.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapData.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\MapData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T15:47:43.085Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ChunkData.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\ChunkData.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\ChunkData.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\ChunkData.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\ChunkData.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA0wB4AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T12:52:07.02Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "MapLoadMenuUI.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\UI\\MapLoadMenuUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\UI\\MapLoadMenuUI.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\UI\\MapLoadMenuUI.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\UI\\MapLoadMenuUI.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T13:08:59.112Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "NetworkVector3IntWrapper.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Network\\NetworkVector3IntWrapper.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\Network\\NetworkVector3IntWrapper.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Network\\NetworkVector3IntWrapper.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\Network\\NetworkVector3IntWrapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T12:42:34.249Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "NetworkVoxelData.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Network\\NetworkVoxelData.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\Network\\NetworkVoxelData.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Network\\NetworkVoxelData.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\Network\\NetworkVoxelData.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T15:57:50.189Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "MapSaveMenuUI.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\UI\\MapSaveMenuUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\UI\\MapSaveMenuUI.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\UI\\MapSaveMenuUI.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\UI\\MapSaveMenuUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T17:41:50.208Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SaveAndLoad.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Helpers\\SaveAndLoad.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Helpers\\SaveAndLoad.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Helpers\\SaveAndLoad.cs",
-              "RelativeToolTip": "Assets\\Code\\Helpers\\SaveAndLoad.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAqwAkAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T15:59:48.468Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SavedMapUI.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\UI\\SavedMapUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\UI\\SavedMapUI.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\UI\\SavedMapUI.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\UI\\SavedMapUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T13:38:17.694Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Map.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Map.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\Map.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Map.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\Map.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wB0AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T12:56:37.511Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NetworkMap.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\NetworkMap.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\NetworkMap.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\NetworkMap.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\NetworkMap.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T15:45:04.843Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ChunkRenderer.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\ChunkRenderer.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\ChunkRenderer.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\ChunkRenderer.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\ChunkRenderer.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAewCsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T09:22:47.86Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "VoxelMapScanner.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\VoxelMapScanner.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\MapVoxelEditor\\VoxelMapScanner.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\VoxelMapScanner.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\MapVoxelEditor\\VoxelMapScanner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T09:07:04.882Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Chunk.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Chunk.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\Chunk.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Chunk.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\Chunk.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAApwDcAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T14:09:10.102Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "VoxelType.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\VoxelType.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\VoxelType.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\VoxelType.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\VoxelType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T12:48:10.492Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "NetworkGrid.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Grid\\NetworkGrid.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\Grid\\NetworkGrid.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Grid\\NetworkGrid.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\Grid\\NetworkGrid.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T18:42:03.881Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "GameInput.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\User\\GameInput.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\User\\GameInput.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\User\\GameInput.cs",
-              "RelativeToolTip": "Assets\\Code\\User\\GameInput.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAowHUAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T14:07:04.703Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "ConnectorTest.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Helpers\\ConnectorTest.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Helpers\\ConnectorTest.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Helpers\\ConnectorTest.cs",
-              "RelativeToolTip": "Assets\\Code\\Helpers\\ConnectorTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T19:46:14.151Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "TileDataArray.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Grid\\TileDataArray.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\Grid\\TileDataArray.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Grid\\TileDataArray.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\Grid\\TileDataArray.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwCEAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T19:10:20.577Z"
             }
           ]
         }

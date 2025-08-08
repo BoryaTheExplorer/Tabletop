@@ -8501,8 +8501,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30fbec29025528344886a7f13244c5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minAngular: -20
-  _maxAngular: 20
+  _minAngular: -40
+  _maxAngular: 40
   _diceTypes: 000000000100000002000000030000000400000005000000
   _prefabs:
   - {fileID: 8692935046237805992, guid: 793d542202434964d8f9c578e6a6e82f, type: 3}

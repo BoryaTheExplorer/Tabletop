@@ -36,7 +36,6 @@ public class NetworkMapSender : NetworkBehaviour
                     }
 
                     SendMapToClient(clientId, maps[map.Key], map.Key);
-                    Debug.Log("Sending stuff");
                 }
             };
     }
