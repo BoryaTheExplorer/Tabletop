@@ -21,6 +21,21 @@ public struct RollMessageData : INetworkSerializable, IMessageData
 
         Outcomes = holder;
     }
+    public RollMessageData(RollMessageRequestData data, int[] outcomes)
+    {
+        RollType = data.RollType;
+        Dice = data.Dice;
+
+
+        byte[] holder = new byte[outcomes.Length];
+
+        for (int i = 0; i < holder.Length; i++)
+        {
+            holder[i] = (byte)outcomes[i];
+        }
+
+        Outcomes = holder;
+    }
 
     public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
     {

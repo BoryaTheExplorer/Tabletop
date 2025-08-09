@@ -3,14 +3,14 @@ using UnityEngine;
 
 public struct MessageContent : INetworkSerializable
 {
-    public string Name;
+    public string Sender;
     public MessageType MessageType;
     public PlainMessageData PlainMessage;
     public RollMessageData RollMessage;
 
-    public MessageContent(string name, MessageType type, PlainMessageData plainData = default, RollMessageData rollData = default)
+    public MessageContent(string sender, MessageType type, PlainMessageData plainData = default, RollMessageData rollData = default)
     {
-        Name = name;
+        Sender = sender;
         MessageType = type;
 
         switch (MessageType)
@@ -32,7 +32,7 @@ public struct MessageContent : INetworkSerializable
 
     public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
     {
-        serializer.SerializeValue(ref Name);
+        serializer.SerializeValue(ref Sender);
         serializer.SerializeValue(ref MessageType);
         
         switch(MessageType)

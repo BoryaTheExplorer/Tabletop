@@ -1,9 +1,14 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Unity.Netcode;
 using UnityEngine;
 
 public class DiceRoller : MonoBehaviour
 {
+    public static DiceRoller Instance { get; private set; }
+
     [SerializeField] private float _minAngular;
     [SerializeField] private float _maxAngular;
 
@@ -13,6 +18,16 @@ public class DiceRoller : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+
         Build();
     }
 
@@ -30,8 +45,9 @@ public class DiceRoller : MonoBehaviour
         }
     }
 
-    public Dice SpawnDice(DiceType type, Vector3 position, Quaternion rotation)
+    public Dice SpawnDie(DiceType type, Vector3 position, Quaternion rotation)
     {
+        Debug.Log(type);
         if (!NetworkManager.Singleton.IsServer)
         {
             Debug.Log("NOT ALLOWED TO SPAWN DICE");
@@ -48,11 +64,42 @@ public class DiceRoller : MonoBehaviour
         return dice;
     }
 
+    public async Task<int[]> RollDice(DiceType diceType, int amount)
+    {
+        Debug.Log("In Dice Roller");
+        await Awaitable.WaitForSecondsAsync(0);
+
+        List<int> diceResults = new List<int>();
+        var tasks = new List<Task>();
+
+        Vector3 position = new Vector3(32f, 32f, 32f);
+        
+        for (int i = 0; i < amount; i++)
+        {
+            var tcs = new TaskCompletionSource<int>();
+            var die = SpawnDie(diceType, position, Quaternion.identity);
+            
+            void HandleDie(int result)
+            {
+                diceResults.Add(result);
+                die.OnDiceRolled -= HandleDie;
+                tcs.TrySetResult(result);
+            }
+
+            die.OnDiceRolled += HandleDie;
+            tasks.Add(tcs.Task);
+        }
+
+        await Task.WhenAll(tasks);
+        return diceResults.ToArray();
+    }
+
+
     private Vector3 GetRandomAngularVelocity(float min, float max)
     {
-        float x = Random.Range(min, max);
-        float y = Random.Range(min, max);
-        float z = Random.Range(min, max);
+        float x = UnityEngine.Random.Range(min, max);
+        float y = UnityEngine.Random.Range(min, max);
+        float z = UnityEngine.Random.Range(min, max);
 
         Vector3 angular = new Vector3(x, y, z);
 

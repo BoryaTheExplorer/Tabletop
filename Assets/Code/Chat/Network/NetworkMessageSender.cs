@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class NetworkMessageSender : NetworkBehaviour
 {
-    [ServerRpc(RequireOwnership = false)]
-    public void SendMessageServerRpc(MessageContent content)
+    public override void OnNetworkSpawn()
     {
-        SendChatMessageToClients(content);
+        if (IsServer)
+            MessageConstructor.MessageSender = this;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void SendMessageServerRpc(MessageRequest request)
+    {
+        MessageConstructor.BuildAndSendMessage(request);
     }
 
     public void SendChatMessageToClients(MessageContent content)

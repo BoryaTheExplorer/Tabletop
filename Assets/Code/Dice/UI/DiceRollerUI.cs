@@ -13,6 +13,6 @@ public class DiceRollerUI : MonoBehaviour
 
     private void RollDice()
     {
-        _roller.SpawnDice(DiceType.D6, new Vector3(32f, 40f, 32f), Quaternion.identity);
+        _roller.SpawnDie(DiceType.D6, new Vector3(32f, 40f, 32f), Quaternion.identity);
     }
 }

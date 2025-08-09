@@ -1,18 +1,14 @@
 using Unity.Netcode;
 using UnityEngine;
 
-public struct PlainMessageData : INetworkSerializable, IMessageData
+public struct PlainMessageRequestData : INetworkSerializable
 {
     public string Message;
-
-    public PlainMessageData(string message)
+    public PlainMessageRequestData(string message)
     {
         Message = message;
     }
-    public PlainMessageData(PlainMessageRequestData data)
-    {
-        Message = data.Message;
-    }
+
     public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
     {
         serializer.SerializeValue(ref Message);
