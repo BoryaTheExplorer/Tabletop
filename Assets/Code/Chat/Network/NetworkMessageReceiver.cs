@@ -13,8 +13,6 @@ public class NetworkMessageReceiver : NetworkBehaviour
         MessageContent content;
         reader.ReadValueSafe(out content);
 
-        Debug.Log(content.Sender);
-        Debug.Log(content.RollMessage.Outcomes.Length);
-        Debug.Log("Sum: " + content.RollMessage.Outcomes[0] + content.RollMessage.Outcomes[1]);
+        //MessageContainer.Instance.SpawnPlainMessage(content.Sender, content.PlainMessage.Message);
     }
 }

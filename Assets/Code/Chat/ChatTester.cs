@@ -6,7 +6,7 @@ public class ChatTester : MonoBehaviour
 
     public void SendTestMessage()
     {
-        MessageRequest request = new MessageRequest("Test Sender", MessageType.RollMessage, rollData: new RollMessageRequestData(RollType.PlainRoll, "2d8"));
+        MessageRequest request = new MessageRequest("Test Sender", MessageType.RollMessage, rollData: new RollMessageRequestData(RollType.PlainRoll, "2d8+3d6"));
         _messageSender.SendMessageServerRpc(request);
     }
 }
