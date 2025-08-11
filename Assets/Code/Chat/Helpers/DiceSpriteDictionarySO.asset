@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec49556db779ebb4d877bca2e80856a8, type: 3}
+  m_Name: DiceSpriteDictionarySO
+  m_EditorClassIdentifier: 
+  _diceTypes: 0400000006000000080000000a0000000c00000014000000
+  _diceSprites:
+  - {fileID: 21300000, guid: bfead441466ac7740b9005d0f08f67a4, type: 3}
+  - {fileID: 21300000, guid: 3653e4e0f5cabf541bcc37528667104c, type: 3}
+  - {fileID: 21300000, guid: 9f8c41cd5c455e04f85ed3c1faa53d68, type: 3}
+  - {fileID: 21300000, guid: 1b654548e4a9e6244bde66100350adc9, type: 3}
+  - {fileID: 21300000, guid: 69c509f0b2d371d4ebc359b04aea23e8, type: 3}
+  - {fileID: 21300000, guid: 13dd874bb6ddc6e41aee8b50c9933b94, type: 3}

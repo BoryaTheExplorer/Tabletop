@@ -7,13 +7,13 @@ public class NetworkMessageSender : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         if (IsServer)
-            MessageConstructor.MessageSender = this;
+            MessageDataConstructorAndSender.MessageSender = this;
     }
 
     [ServerRpc(RequireOwnership = false)]
     public void SendMessageServerRpc(MessageRequest request)
     {
-        MessageConstructor.BuildAndSendMessage(request);
+        MessageDataConstructorAndSender.BuildAndSendMessage(request);
     }
 
     public void SendChatMessageToClients(MessageContent content)

@@ -4,7 +4,9 @@ using UnityEngine;
 public class MessageContainer : MonoBehaviour
 {
     [SerializeField] private Transform _content;
+    [Header("Message Prefabs")]
     [SerializeField] private PlainMessage _plainMessagePrefab;
+    [SerializeField] private RollMessage _rollMessagePrefab;
     public static MessageContainer Instance { get; private set; }
 
     private void Awake()
@@ -27,9 +29,13 @@ public class MessageContainer : MonoBehaviour
         PlainMessage plainMessage = Instantiate(_plainMessagePrefab, _content);
         plainMessage.Init(sender, message);
     }
-    public void SpawnRollMessage(Dictionary<DiceType, int[]> rolls, string sender, RollType rollType)
+    public void SpawnRollMessage(Dictionary<DiceType, int[]> rolls, string sender, RollType rollType, int[] modifiers = null)
     {
+        if (!HasSetup())
+            return;
 
+        RollMessage rollMessage = Instantiate(_rollMessagePrefab, _content);
+        rollMessage.Init(sender, rolls);
     }
     private bool HasSetup()
     {

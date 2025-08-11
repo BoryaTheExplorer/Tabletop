@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public static class MessageConstructor
+public static class MessageDataConstructorAndSender
 {
     public static NetworkMessageSender MessageSender;
     public static void BuildAndSendMessage(MessageRequest request)

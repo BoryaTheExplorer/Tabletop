@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -14,5 +15,23 @@ public class NetworkMessageReceiver : NetworkBehaviour
         reader.ReadValueSafe(out content);
 
         //MessageContainer.Instance.SpawnPlainMessage(content.Sender, content.PlainMessage.Message);
+
+        Dictionary<DiceType, int> dice = DiceParser.ParseDiceFromString(content.RollMessage.Dice);
+        Dictionary<DiceType, int[]> outcomes = new Dictionary<DiceType, int[]>();
+        int index = 0;
+        foreach (var die in dice)
+        {
+            int[] nums = new int[die.Value];
+
+            for(int i = 0; i < nums.Length; i++)
+            {
+                nums[i] = content.RollMessage.Outcomes[i + index];
+            }
+
+            outcomes.Add(die.Key, (int[])nums.Clone());
+            index += nums.Length;
+        }
+
+        MessageContainer.Instance.SpawnRollMessage(outcomes, content.Sender, content.RollMessage.RollType);
     }
 }
