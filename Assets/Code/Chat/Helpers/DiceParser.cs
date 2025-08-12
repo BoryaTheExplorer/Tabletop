@@ -33,4 +33,9 @@ public static class DiceParser
 
         return diceDictionary;
     }
+
+    public static string ParseDieToString(DiceType die)
+    {
+        return "1" + die.ToString();
+    }
 }

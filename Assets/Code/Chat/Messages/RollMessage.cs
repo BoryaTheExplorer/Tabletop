@@ -7,18 +7,18 @@ public class RollMessage : ChatMessage
 {
     [SerializeField] private Transform _diceSpriteParent;
     [SerializeField] private DiceSpriteDictionarySO _diceSpriteDictionary;
-    [SerializeField] private Image _dice_UIPrefab;
+    [SerializeField] private RollMessageDiceRolledUI _dice_UIPrefab;
 
     public void Init(string sender, Dictionary<DiceType, int[]> diceData, int[] modifiers = null)
     {
         _sender.text = sender;
         int sum = 0;
-        Image dice_ui;
+        RollMessageDiceRolledUI dice_ui;
 
         foreach (var dice in diceData)
         {
             dice_ui = Instantiate(_dice_UIPrefab, _diceSpriteParent);
-            dice_ui.sprite = _diceSpriteDictionary.GetSprite(dice.Key);
+            dice_ui.Setup(_diceSpriteDictionary.GetSprite(dice.Key), dice.Value.Length);
 
             foreach (var outcome in dice.Value)
             {

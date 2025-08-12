@@ -266,26 +266,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   _sides:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8135953099560973284}
+  - {fileID: 4337449128294903217}
+  - {fileID: 3243940204161605529}
+  - {fileID: 4878575510581195948}
+  - {fileID: 5740250609228645129}
+  - {fileID: 4496452664132441169}
+  - {fileID: 8749915265838102899}
+  - {fileID: 6619001918255404677}
+  - {fileID: 5508824616659909624}
+  - {fileID: 1530786857562109165}
+  - {fileID: 8537072745391960144}
+  - {fileID: 6862445519768663376}
+  - {fileID: 2547853878818277396}
+  - {fileID: 8988406365263481948}
+  - {fileID: 5544659450182214282}
+  - {fileID: 7883293409689039170}
+  - {fileID: 2880648505229725777}
+  - {fileID: 8222169282326146476}
+  - {fileID: 6070666027198234992}
+  - {fileID: 6301741695669253744}
   _rigidBody: {fileID: 3059599657736086760}
 --- !u!54 &3059599657736086760
 Rigidbody:
@@ -896,10 +896,40 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 561c523671e2a644f8d6ce3a77337a35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3927359383392226450}
   m_SourcePrefab: {fileID: 100100000, guid: 561c523671e2a644f8d6ce3a77337a35, type: 3}
 --- !u!4 &507189866430737422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 561c523671e2a644f8d6ce3a77337a35, type: 3}
   m_PrefabInstance: {fileID: 36977686038793189}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &883328759283349172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 561c523671e2a644f8d6ce3a77337a35, type: 3}
+  m_PrefabInstance: {fileID: 36977686038793189}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &3927359383392226450
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883328759283349172}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 289301614986012343, guid: 561c523671e2a644f8d6ce3a77337a35, type: 3}
