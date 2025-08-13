@@ -10,19 +10,29 @@ public class NetworkMap : NetworkBehaviour
         MapRegistry.Init(_map);
         MapRegistry.NetworkMap = this;
     }
-    public void SendEditVoxelRPC(NetworkVoxelData data)
+    public void SendEditVoxelRPC(NetworkVoxelData data, ulong clientId)
     {
-        EditVoxelClientRPC(data);
+        RequestEditVoxelServerRpc(data, clientId);
     }
-    public void SendUpdateMapRPC()
+    public void SendUpdateMapRpc(ulong clientId)
     {
-        UpdateMapClientRPC();
+        RequestUpdateMapServerRpc(clientId);
+    }
+    [ServerRpc(RequireOwnership = false)]
+    public void RequestEditVoxelServerRpc(NetworkVoxelData data, ulong clientId)
+    {
+        EditVoxelClientRpc(data, clientId);
+    }
+    [ServerRpc(RequireOwnership = false)]
+    public void RequestUpdateMapServerRpc(ulong clientId)
+    {
+        UpdateMapClientRpc(clientId);
     }
 
     [ClientRpc()]
-    public void EditVoxelClientRPC(NetworkVoxelData data)
+    public void EditVoxelClientRpc(NetworkVoxelData data, ulong clientId)
     {
-        if (IsHost)
+        if (NetworkManager.LocalClientId == clientId)
             return;
 
         if (_map == null) 
@@ -49,9 +59,9 @@ public class NetworkMap : NetworkBehaviour
     }
 
     [ClientRpc()]
-    public void UpdateMapClientRPC()
+    public void UpdateMapClientRpc(ulong clientId)
     {
-        if (IsHost)
+        if (NetworkManager.Singleton.LocalClientId == clientId)
             return;
 
         if (_map == null)

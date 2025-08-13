@@ -1,9 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.Splines;
-using static UnityEditor.PlayerSettings;
 
 public class VoxelEditor : MonoBehaviour
 {
@@ -135,7 +133,7 @@ public class VoxelEditor : MonoBehaviour
                 Y = localPosition.y,
                 Z = localPosition.z
             }
-        });
+        }, NetworkManager.Singleton.LocalClientId);
     
     }
     //Used by a Button
@@ -166,7 +164,7 @@ public class VoxelEditor : MonoBehaviour
     public void UpdateMap()
     {
         _map.UpdateModifiedChunks();
-        _networkMap.SendUpdateMapRPC();
+        _networkMap.SendUpdateMapRpc(NetworkManager.Singleton.LocalClientId);
     }
 
     public void SetBrushType(VoxelEditorBrushType brushType)
