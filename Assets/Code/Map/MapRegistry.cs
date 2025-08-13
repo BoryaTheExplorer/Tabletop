@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
-public static class MapRegister
+public static class MapRegistry
 {
     public static Map Map { get; private set; }
     public static NetworkMap NetworkMap { get; set; }

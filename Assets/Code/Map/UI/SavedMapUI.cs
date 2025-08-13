@@ -13,12 +13,12 @@ public class SavedMapUI : MonoBehaviour
 
     public void Load()
     {
-        MapRegister.LoadMapData(MapName);
-        MapRegister.NetworkMap.LoadFromRegisterClientRpc(MapName);
+        MapRegistry.LoadMapData(MapName);
+        MapRegistry.NetworkMap.LoadFromRegisterClientRpc(MapName);
     }
     public void Remove()
     {
-        MapRegister.RemoveMapData(MapName);
+        MapRegistry.RemoveMapData(MapName);
         Destroy(gameObject);
     }
 }

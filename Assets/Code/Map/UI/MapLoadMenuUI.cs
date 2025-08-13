@@ -14,7 +14,7 @@ public class MapLoadMenuUI : MonoBehaviour
         List<SavedMapUI> savedMaps = new List<SavedMapUI>();
         SavedMapUI ui;
 
-        foreach (string name in MapRegister.SavedMaps.Keys)
+        foreach (string name in MapRegistry.SavedMaps.Keys)
         {
             ui = Instantiate(_mapSavePrefab, _content.transform);
             ui.Init(name);

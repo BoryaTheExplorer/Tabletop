@@ -101,9 +101,9 @@ public class NetworkMapReceiver : NetworkBehaviour
         {
             byte[] compressedBlob = asm.Reassemble();
             byte[] raw = Compressor.Decompress(compressedBlob);
-            var chunk = SerializableChunkData.DeserializeFromBytes(raw, MapRegister.Map.ChunkSize, MapRegister.Map.ChunkHeight);
+            var chunk = SerializableChunkData.DeserializeFromBytes(raw, MapRegistry.Map.ChunkSize, MapRegistry.Map.ChunkHeight);
 
-            ChunkData chunkData = chunk.ToChunkData(MapRegister.Map);
+            ChunkData chunkData = chunk.ToChunkData(MapRegistry.Map);
             _mapData[_mapKey].Add(position, chunkData);
             transform.parent.GetComponentInChildren<NetworkMapSender>().ClientAckChunkServerRpc(x, y, z);
 
@@ -116,12 +116,12 @@ public class NetworkMapReceiver : NetworkBehaviour
     private void HandleMap()
     {
         MapData mapData = new MapData(new Dictionary<Vector3Int, ChunkData>(_mapData[_mapKey]), _mapKey);
-        int size = MapRegister.Map.MapSizeInChunks * MapRegister.Map.MapSizeInChunks;
+        int size = MapRegistry.Map.MapSizeInChunks * MapRegistry.Map.MapSizeInChunks;
 
 
         if (_mapData[_mapKey].Values.Count == size)
         {
-            MapRegister.SavedMaps.Add(_mapKey, mapData);
+            MapRegistry.SavedMaps.Add(_mapKey, mapData);
 
             _mapData.Clear();
             _mapKey = string.Empty;

@@ -5,8 +5,7 @@ using UnityEngine;
 
 public static class MessageDataConstructorAndSender
 {
-    public static NetworkMessageSender MessageSender;
-    public static void BuildAndSendMessage(MessageRequest request)
+    public static void BuildAndSendMessage(MessageRequest request, NetworkMessageSender networkMessageSender)
     {
         
         switch (request.MessageType)
@@ -17,15 +16,15 @@ public static class MessageDataConstructorAndSender
                 content = new MessageContent(request.Sender, 
                                              request.MessageType,
                                              new PlainMessageData(request.PlainMessageRequestData));
-                MessageSender.SendChatMessageToClients(content);
+                networkMessageSender.SendChatMessageToClients(content);
                 break;
             case MessageType.RollMessage:
-                _ = SendRollMessage(request);
+                _ = SendRollMessage(request, networkMessageSender);
                 break;
         }
     }
 
-    private static async Task SendRollMessage(MessageRequest request)
+    private static async Task SendRollMessage(MessageRequest request, NetworkMessageSender networkMessageSender)
     {
         await Awaitable.WaitForSecondsAsync(0);
         Debug.Log("Rolling");
@@ -47,6 +46,6 @@ public static class MessageDataConstructorAndSender
                                      request.MessageType,
                                      rollData: new RollMessageData(request.RollMessageRequestData, final));
 
-        MessageSender.SendChatMessageToClients(content);
+        networkMessageSender.SendChatMessageToClients(content);
     }
 }

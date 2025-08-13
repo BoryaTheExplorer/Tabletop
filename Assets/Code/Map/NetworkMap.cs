@@ -7,8 +7,8 @@ public class NetworkMap : NetworkBehaviour
     [SerializeField] private Map _map;
     public override void OnNetworkSpawn()
     {
-        MapRegister.Init(_map);
-        MapRegister.NetworkMap = this;
+        MapRegistry.Init(_map);
+        MapRegistry.NetworkMap = this;
     }
     public void SendEditVoxelRPC(NetworkVoxelData data)
     {
@@ -45,7 +45,7 @@ public class NetworkMap : NetworkBehaviour
         if (IsServer)
             return;
 
-        MapRegister.LoadMapData(mapKey);
+        MapRegistry.LoadMapData(mapKey);
     }
 
     [ClientRpc()]

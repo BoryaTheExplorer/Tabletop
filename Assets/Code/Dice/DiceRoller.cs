@@ -48,11 +48,6 @@ public class DiceRoller : MonoBehaviour
     public Dice SpawnDie(DiceType type, Vector3 position, Quaternion rotation)
     {
         Debug.Log(type);
-        if (!NetworkManager.Singleton.IsServer)
-        {
-            Debug.Log("NOT ALLOWED TO SPAWN DICE");
-            return default;
-        }
 
         GameObject die = Instantiate(_dicePrefabs[type], position, rotation);
         NetworkObject networkDie = die.GetComponent<NetworkObject>();

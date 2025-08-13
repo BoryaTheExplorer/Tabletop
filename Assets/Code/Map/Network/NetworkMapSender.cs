@@ -22,12 +22,12 @@ public class NetworkMapSender : NetworkBehaviour
                 if (clientId == NetworkManager.Singleton.LocalClientId)
                     return;
 
-                if (MapRegister.Map == null)
-                    MapRegister.Init(_map);
+                if (MapRegistry.Map == null)
+                    MapRegistry.Init(_map);
 
                 Dictionary<string, List<SerializableChunkData>> maps = new Dictionary<string, List<SerializableChunkData>>();
 
-                foreach (var map in MapRegister.SavedMaps){
+                foreach (var map in MapRegistry.SavedMaps){
                     maps[map.Key] = new List<SerializableChunkData>();
 
                     foreach (var chunkData in map.Value.ChunkDataDicitonary.Values)

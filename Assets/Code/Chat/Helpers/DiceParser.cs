@@ -20,9 +20,13 @@ public static class DiceParser
         foreach (string s in parts)
         {
             split = s.Split('d');
-            int.TryParse(split[0], out amount);
-            int.TryParse(split[1], out sides);
-            
+
+            if (split.Length != 2)
+                return default;
+
+            if (!int.TryParse(split[0], out amount) || !int.TryParse(split[1], out sides))
+                return default;
+
             type = (DiceType)sides;
 
             if (diceDictionary.ContainsKey(type))

@@ -20,7 +20,7 @@ public class MapSaveMenuUI : MonoBehaviour
 
         _warning.gameObject.SetActive(false);
 
-        MapRegister.RegisterMapData(new MapData(new Dictionary<Vector3Int, ChunkData>(MapRegister.Map.ChunkDataDictionary), text));
+        MapRegistry.RegisterMapData(new MapData(new Dictionary<Vector3Int, ChunkData>(MapRegistry.Map.ChunkDataDictionary), text));
         gameObject.SetActive(false);
     }
 }
