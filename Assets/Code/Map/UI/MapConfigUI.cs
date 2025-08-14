@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class MapConfigUI : MonoBehaviour
 {
     [Header("Map")]
     [SerializeField] private Map _map;
+    [SerializeField] private NetworkMap _networkMap;
     [Header("Config")]
     [SerializeField] private Toggle _usePerlin;
     [SerializeField] private Slider _perlinSlider;
@@ -20,6 +22,9 @@ public class MapConfigUI : MonoBehaviour
 
     private void Start()
     {
+        if (!NetworkManager.Singleton.IsServer) 
+            Destroy(gameObject);
+
         //Perlin
         {
             if (_usePerlin)
@@ -130,5 +135,10 @@ public class MapConfigUI : MonoBehaviour
             return;
 
         _map.SetSubsurfaceVoxel(voxel);
+    }
+    public void Generate()
+    {
+        _map.GenerateMap();
+
     }
 }

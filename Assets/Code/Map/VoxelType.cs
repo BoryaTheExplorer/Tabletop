@@ -10,7 +10,4 @@ public enum VoxelType
     StoneBrick,
     Brick,
     Water,
-    TreeLog,
-    GrassRoad,
-    StoneRoad
 }

@@ -11987,7 +11987,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1100101462}
   - component: {fileID: 1100101460}
-  - component: {fileID: 1100101461}
   - component: {fileID: 1100101463}
   m_Layer: 0
   m_Name: Grid
@@ -12021,21 +12020,6 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
---- !u!114 &1100101461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100101459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32f6309d8dd3f1d47bb13a87059a62b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  _tilePrefab: {fileID: 0}
-  _gridSize: 50
 --- !u!4 &1100101462
 Transform:
   m_ObjectHideFlags: 0
@@ -15779,6 +15763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 325602568}
+  _networkMap: {fileID: 0}
   _usePerlin: {fileID: 513644117}
   _perlinSlider: {fileID: 394261114}
   _perlinInput: {fileID: 977915899}
@@ -18081,6 +18066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1900850232}
   - component: {fileID: 1900850233}
+  - component: {fileID: 1900850234}
   m_Layer: 5
   m_Name: VoxelSelector
   m_TagString: Untagged
@@ -18130,6 +18116,22 @@ MonoBehaviour:
   _voxelToPaint: 0
   _brushType: 0
   _brushSize: 3
+--- !u!114 &1900850234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900850231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d89423d2dacadb4a9c1731c3e3363bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToDestroyOnClients:
+  - {fileID: 961847105}
+  - {fileID: 1011514712}
+  - {fileID: 1417219802}
 --- !u!1 &1903220940
 GameObject:
   m_ObjectHideFlags: 0

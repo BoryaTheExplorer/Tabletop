@@ -50,7 +50,7 @@ public class NetworkMap : NetworkBehaviour
             chunkData.Modified = true;
     }
     [ClientRpc()]
-    public void LoadFromRegisterClientRpc(string mapKey)
+    public void LoadFromRegistryClientRpc(string mapKey)
     {
         if (IsServer)
             return;

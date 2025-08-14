@@ -70,10 +70,6 @@ public class Map : MonoBehaviour
             }
         }
         BuildChunks();
-
-        Debug.Log("Chunks: " + ChunkDataDictionary.Keys.Count);
-        foreach (Vector3Int pos in ChunkDataDictionary.Keys)
-            Debug.Log(pos.ToString());
     }
 
     private void GenerateVoxels(ChunkData data)
