@@ -1,3 +1,4 @@
+using Unity.Netcode;
 using UnityEngine;
 
 public class ChatTester : MonoBehaviour
@@ -6,7 +7,7 @@ public class ChatTester : MonoBehaviour
 
     public void SendTestMessage()
     {
-        MessageRequest request = new MessageRequest("Test Sender", MessageType.RollMessage, rollData: new RollMessageRequestData(RollType.PlainRoll, "2d8+3d6+4d4"));
+        MessageRequest request = new MessageRequest(GameSession.ClientName, MessageType.RollMessage, rollData: new RollMessageRequestData(RollType.PlainRoll, "2d8+3d6+4d4"));
         _messageSender.SendMessageServerRpc(request);
     }
 }

@@ -61,7 +61,6 @@ public class DiceRoller : MonoBehaviour
 
     public async Task<int[]> RollDice(DiceType diceType, int amount)
     {
-        Debug.Log("In Dice Roller");
         await Awaitable.WaitForSecondsAsync(0);
 
         List<int> diceResults = new List<int>();
