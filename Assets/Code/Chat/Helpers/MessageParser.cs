@@ -28,19 +28,33 @@ public class MessageParser : MonoBehaviour
             if (!Enum.TryParse<ChatCommands>(splits[0], out ChatCommands cmd))
                 return false;
 
-            message = message.Substring(splits[0].Length - 1);
+            message = message.Substring(splits[0].Length + 1);
 
             if (_commands.TryGetValue(cmd, out Func<ulong, string, bool> action))
                 return action.Invoke(clientId, message);
         }
 
-        MessageRequest request = new MessageRequest(clientId.ToString(), MessageType.PlainMessage, plainData: new PlainMessageRequestData(message));
+        string userName = "a";
+
+        if (PlayersData.Instance.PlayerNames.ContainsKey(clientId))
+        {
+            Debug.Log("Has Key: " + clientId);
+            userName = PlayersData.Instance.PlayerNames[clientId];
+        }
+        else
+        {
+            Debug.Log("Has no Key: " + clientId);
+        }
+
+            MessageRequest request = new MessageRequest(clientId, MessageType.PlainMessage, plainData: new PlainMessageRequestData(message));
+        _networkMessageSender.SendMessageServerRpc(request);
         return false;
     }
 
     private bool SendRollMessage(ulong clientId, string message)
     {
-
+        MessageRequest request = new MessageRequest(clientId, MessageType.RollMessage, rollData: new RollMessageRequestData(RollType.PlainRoll, message));
+        _networkMessageSender.SendMessageServerRpc(request);
 
         return false;
     }

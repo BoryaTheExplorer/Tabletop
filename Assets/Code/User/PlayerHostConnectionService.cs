@@ -19,7 +19,7 @@ public class PlayerHostConnectionService : MonoBehaviour
         {
             string code = await StartRelayHostAsync();
             
-            MessageRequest request = new MessageRequest(GameSession.ClientName, MessageType.PlainMessage,
+            MessageRequest request = new MessageRequest(NetworkManager.Singleton.LocalClientId, MessageType.PlainMessage,
                                                         plainData: new PlainMessageRequestData(code));
             _messageSender.SendMessageServerRpc(request);
         }

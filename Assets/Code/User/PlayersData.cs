@@ -30,6 +30,7 @@ public class PlayersData : NetworkBehaviour
     {
         ulong clientId = rpcParams.Receive.SenderClientId;
         _playerNames[clientId] = name;
+        Debug.Log(clientId + " | " +  name);
     }
     [ClientRpc]
     public void UpdatePLayerNameClientRpc(ulong clientId, string name)

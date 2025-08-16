@@ -3,13 +3,13 @@ using UnityEngine;
 
 public struct MessageRequest : INetworkSerializable
 {
-    public string Sender;
+    public ulong Sender;
     public MessageType MessageType;
 
     public PlainMessageRequestData PlainMessageRequestData;
     public RollMessageRequestData RollMessageRequestData;
     
-    public MessageRequest(string sender, MessageType type,  PlainMessageRequestData plainData = default, RollMessageRequestData rollData = default)
+    public MessageRequest(ulong sender, MessageType type,  PlainMessageRequestData plainData = default, RollMessageRequestData rollData = default)
     {
         Sender = sender;
         MessageType = type;

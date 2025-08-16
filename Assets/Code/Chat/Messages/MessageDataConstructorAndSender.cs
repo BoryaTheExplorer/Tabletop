@@ -13,7 +13,7 @@ public static class MessageDataConstructorAndSender
             case MessageType.PlainMessage:
                 MessageContent content;
 
-                content = new MessageContent(request.Sender, 
+                content = new MessageContent(PlayersData.Instance.PlayerNames[request.Sender], 
                                              request.MessageType,
                                              new PlainMessageData(request.PlainMessageRequestData));
                 networkMessageSender.SendChatMessageToClients(content);
@@ -42,7 +42,7 @@ public static class MessageDataConstructorAndSender
 
         var final = allResults.SelectMany(r => r).ToArray();
 
-        content = new MessageContent(request.Sender,
+        content = new MessageContent(PlayersData.Instance.PlayerNames[request.Sender],
                                      request.MessageType,
                                      rollData: new RollMessageData(request.RollMessageRequestData, final));
 
