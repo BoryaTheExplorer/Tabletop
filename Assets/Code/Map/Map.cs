@@ -18,7 +18,6 @@ public class Map : MonoBehaviour
     public int MapSizeInChunks = 3;
     public int ChunkSize = 16;
     public int ChunkHeight = 100;
-    public int WaterThreshold = 50;
 
     public Dictionary<Vector3Int, ChunkData> ChunkDataDictionary = new Dictionary<Vector3Int, ChunkData>();
     public Dictionary<Vector3Int, ChunkRenderer> ChunkDictionary = new Dictionary<Vector3Int, ChunkRenderer>();

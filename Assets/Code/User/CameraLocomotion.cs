@@ -32,7 +32,7 @@ public class CameraLocomotion : NetworkBehaviour
         _gameInput.OnAdditionalOptionStarted += GameInput_OnAdditionalOptionStarted;
         _gameInput.OnAdditionalOptionCanceled += GameInput_OnAdditionalOptionCanceled;
 
-        transform.position = Vector3.one;
+        _focusPosition = PlayersData.Instance.SpawnPoints[(int)OwnerClientId].position;
 
         Move();
     }

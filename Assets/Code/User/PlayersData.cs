@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayersData : NetworkBehaviour
 {
     public static PlayersData Instance { get; private set; }
+    [SerializeField] private List<Transform> _spawnPoints = new List<Transform>();
 
     private Dictionary<ulong, string> _playerNames = new Dictionary<ulong, string>();
     public Dictionary<ulong, string> PlayerNames {  get { return _playerNames; } }
+    public List<Transform> SpawnPoints { get { return _spawnPoints; } }
 
     public void Awake()
     {
