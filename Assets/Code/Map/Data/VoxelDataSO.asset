@@ -21,6 +21,12 @@ MonoBehaviour:
     Side: {x: 0, y: 0}
     IsSolid: 0
     GeneratesCollider: 0
+  - VoxelType: 1
+    Up: {x: 0, y: 1}
+    Down: {x: 0, y: 1}
+    Side: {x: 0, y: 1}
+    IsSolid: 0
+    GeneratesCollider: 0
   - VoxelType: 2
     Up: {x: 0, y: 9}
     Down: {x: 0, y: 7}
@@ -43,6 +49,12 @@ MonoBehaviour:
     Up: {x: 0, y: 2}
     Down: {x: 0, y: 2}
     Side: {x: 0, y: 2}
+    IsSolid: 1
+    GeneratesCollider: 1
+  - VoxelType: 6
+    Up: {x: 0, y: 1}
+    Down: {x: 0, y: 1}
+    Side: {x: 0, y: 1}
     IsSolid: 1
     GeneratesCollider: 1
   - VoxelType: 6

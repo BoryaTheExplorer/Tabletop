@@ -24,7 +24,7 @@ public static class VoxelHelper
                                                                                 neighbourVoxelCoordinates.y,
                                                                                 neighbourVoxelCoordinates.z);
 
-            if (neighbourType != VoxelType.Nothing && !VoxelDataManager.VoxelTextureDataDictionary[neighbourType].IsSolid)
+            if (/*neighbourType != VoxelType.Nothing && */!VoxelDataManager.VoxelTextureDataDictionary[neighbourType].IsSolid)
             {
                 if (voxelType == VoxelType.Water)
                 {
