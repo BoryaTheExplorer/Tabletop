@@ -7,24 +7,30 @@ public class VoxelEditor : MonoBehaviour
 {
     [SerializeField] private Map _map;
     [SerializeField] private NetworkMap _networkMap;
-    [SerializeField] private GameObject _debugObject;
+    [SerializeField] private VoxelSelectorUI _voxelSelector;
     [SerializeField] private VoxelType _voxelToPaint;
-    [SerializeField] private VoxelEditorBrushType _brushType;
+    [SerializeField] private VoxelBrushType _brushType;
     [SerializeField][Range(1, 7)] private int _brushSize;
     public int BrushSizeMin { get; private set; } = 1;
     public int BrushSizeMax { get; private set; } = 7;
     public int BrushSize { get { return _brushSize; } }
-    public VoxelEditorBrushType BrushType { get { return _brushType; } }
+    public VoxelBrushType BrushType { get { return _brushType; } }
     public VoxelType VoxelToPaint {  get { return _voxelToPaint; } }
 
     private Dictionary<Vector3Int, VoxelType> _history = new Dictionary<Vector3Int, VoxelType>();
     private void OnEnable()
     {
         _history.Clear();
-
+        _voxelSelector.OnValueChanged += _voxelSelector_OnValueChanged;
         GameInput.Instance.OnClickPerformed += GameInput_OnClickPerformed;
         GameInput.Instance.OnRightClickPerformed += GameInput_OnRightClickPerformed;
     }
+
+    private void _voxelSelector_OnValueChanged(VoxelType obj)
+    {
+        SetVoxelToPaint(obj);
+    }
+
     private void GameInput_OnRightClickPerformed()
     {
         _ = Paint(VoxelEditorAction.Remove, VoxelType.Air);
@@ -47,10 +53,10 @@ public class VoxelEditor : MonoBehaviour
 
         switch (_brushType)
         {
-            case VoxelEditorBrushType.Single:
+            case VoxelBrushType.Single:
                 SearchAndEditVoxelAt(action, voxel, pos, normal);
                 break;
-            case VoxelEditorBrushType.Sphere:
+            case VoxelBrushType.Sphere:
 
                 Vector3 offset = Vector3.zero;
                 for (int x = -_brushSize + 1; x < _brushSize; x++)
@@ -72,11 +78,11 @@ public class VoxelEditor : MonoBehaviour
     }
     private void SearchAndEditVoxelAt(VoxelEditorAction action, VoxelType voxel, Vector3 hitPosition, Vector3 hitNormal)
     {
-        if (action == VoxelEditorAction.Place && _brushType == VoxelEditorBrushType.Single)
+        if (action == VoxelEditorAction.Place && _brushType == VoxelBrushType.Single)
         {
             hitPosition += hitNormal;
         }
-        else if (_brushType == VoxelEditorBrushType.Single)
+        else if (_brushType == VoxelBrushType.Single)
         {
             hitPosition -= hitNormal;
         }
@@ -167,7 +173,7 @@ public class VoxelEditor : MonoBehaviour
         _networkMap.SendUpdateMapRpc(NetworkManager.Singleton.LocalClientId);
     }
 
-    public void SetBrushType(VoxelEditorBrushType brushType)
+    public void SetBrushType(VoxelBrushType brushType)
     {
         _brushType = brushType;
     }

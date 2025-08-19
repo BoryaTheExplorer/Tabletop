@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class VoxelDataManager : MonoBehaviour
 {
-    public static float TextureOffset = .001f;
+    public static float TextureOffset = .0001f;
 
     public static float TileSizeX;
     public static float TileSizeY;

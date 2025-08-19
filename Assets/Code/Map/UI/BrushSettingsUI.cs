@@ -41,7 +41,7 @@ public class BrushSettingsUI : MonoBehaviour
         }
         //Brush Type
         {
-            string[] brushNames = Enum.GetNames(typeof(VoxelEditorBrushType));
+            string[] brushNames = Enum.GetNames(typeof(VoxelBrushType));
             List<string> brushOptions = brushNames.ToList();
 
             if ( _brushTypeDropdown)
@@ -95,7 +95,7 @@ public class BrushSettingsUI : MonoBehaviour
     }
     private void OnBrushDropdownValueChanged(int option)
     {
-        VoxelEditorBrushType brushType = (VoxelEditorBrushType)option;
+        VoxelBrushType brushType = (VoxelBrushType)option;
 
         if (_editor.BrushType == brushType)
             return;
