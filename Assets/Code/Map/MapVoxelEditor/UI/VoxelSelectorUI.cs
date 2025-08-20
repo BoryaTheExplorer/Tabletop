@@ -16,15 +16,14 @@ public class VoxelSelectorUI : MonoBehaviour
     private void Start()
     {
         VoxelItemUI voxelItemUI;
-        foreach (var voxel in VoxelDataManager.VoxelTextureDataDictionary)
+        foreach (var voxel in VoxelDataManager.VoxelTextureDataDictionary.Keys)
         {
-            if (voxel.Key == VoxelType.Air || voxel.Key == VoxelType.Nothing)
+            if (voxel == VoxelType.Air || voxel == VoxelType.Nothing)
                 continue;
 
             voxelItemUI = Instantiate(_voxelUIPrefab, _content);
             voxelItemUI.OnClick += VoxelItemUI_OnClick;
-            voxelItemUI.Voxel = voxel.Key;
-            voxelItemUI.Setup(voxel.Value.Side.x, voxel.Value.Side.y);
+            voxelItemUI.Setup(voxel);
 
             _voxels.Add(voxelItemUI);
         }

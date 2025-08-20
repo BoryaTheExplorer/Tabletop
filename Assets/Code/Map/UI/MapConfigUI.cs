@@ -11,18 +11,23 @@ public class MapConfigUI : MonoBehaviour
     [Header("Map")]
     [SerializeField] private Map _map;
     [SerializeField] private NetworkMap _networkMap;
-    [Header("Config")]
+    [Header("Perlin")]
     [SerializeField] private Toggle _usePerlin;
     [SerializeField] private Slider _perlinSlider;
     [SerializeField] private TMP_InputField _perlinInput;
+    [Header("Height")]
     [SerializeField] private Slider _heightSlider;
     [SerializeField] private TMP_InputField _heightInput;
-    [SerializeField] private TMP_Dropdown _surfaceVoxel;
-    [SerializeField] private TMP_Dropdown _subsurfaceVoxel;
+    [Header("Voxels")]
+    [SerializeField] private VoxelSelectorUI _surfaceVoxelSelectorUI;
+    [SerializeField] private VoxelItemUI _surfaceVoxelItemUI;
+    [SerializeField] private VoxelSelectorUI _subsurfaceVoxelSelectorUI;
+    [SerializeField] private VoxelItemUI _subsurfaceVoxelItemUI;
 
     private void Start()
     {
-        if (!NetworkManager.Singleton.IsServer) 
+        Debug.Log("Hello!");
+        if (!NetworkManager.Singleton.IsHost) 
             Destroy(gameObject);
 
         //Perlin
@@ -56,26 +61,71 @@ public class MapConfigUI : MonoBehaviour
         }
         //Voxels
         {
-            string[] names = Enum.GetNames(typeof(VoxelType));
-            List<string> options = names.ToList();
-            if (_surfaceVoxel)
+            if (_surfaceVoxelSelectorUI)
             {
-                _surfaceVoxel.onValueChanged.AddListener(OnSurfaceVoxelValueChanged);
-                _surfaceVoxel.options.Clear();
-                _surfaceVoxel.AddOptions(options);
-                _surfaceVoxel.SetValueWithoutNotify((int)_map.SurfaceVoxel);
-            }
-                
-            if (_subsurfaceVoxel)
-            {
-                _subsurfaceVoxel.onValueChanged.AddListener(OnSubsurfaceVoxelValueChanged);
-                _subsurfaceVoxel.options.Clear();
-                _subsurfaceVoxel.AddOptions(options);
+                Debug.Log("surfaceVoxelSelectorUI");
 
-                _subsurfaceVoxel.SetValueWithoutNotify((int)_map.SubsurfaceVoxel);
+                _surfaceVoxelSelectorUI.OnValueChanged += _surfaceVoxelSelectorUI_OnValueChanged;
+                _map.SetSurfaceVoxel(_surfaceVoxelSelectorUI.Voxel);
+                _surfaceVoxelSelectorUI.gameObject.SetActive(false);
+
+                _surfaceVoxelItemUI.OnClick += _surfaceVoxelItemUI_OnClick;
+            }
+            else
+            {
+                Debug.Log("no surfaceVoxelSelectorUI");
+            }
+            if (_subsurfaceVoxelSelectorUI)
+            {
+                Debug.Log("subsurfaceVoxelSelectorUI");
+
+                _subsurfaceVoxelSelectorUI.OnValueChanged += _subsurfaceVoxelSelectorUI_OnValueChanged;
+                _map.SetSubsurfaceVoxel(_subsurfaceVoxelSelectorUI.Voxel);
+                _subsurfaceVoxelSelectorUI.gameObject.SetActive(false);
+
+                _subsurfaceVoxelItemUI.OnClick += _subsurfaceVoxelItemUI_OnClick;
+            }
+            else
+            {
+                Debug.Log("no subsurfaceVoxelSelectorUI");
             }
         }
     }
+
+    private void _subsurfaceVoxelItemUI_OnClick(VoxelType obj)
+    {
+        Debug.Log("subsurfaceVoxelItemUI event");
+        _subsurfaceVoxelSelectorUI.gameObject.SetActive(true);
+    }
+
+    private void _surfaceVoxelItemUI_OnClick(VoxelType obj)
+    {
+        Debug.Log("surfaceVoxelItemUI event");
+        _surfaceVoxelSelectorUI.gameObject.SetActive(true);
+    }
+
+    private void _subsurfaceVoxelSelectorUI_OnValueChanged(VoxelType obj)
+    {
+        Debug.Log("subsurfaceVoxelSelectorUI event");
+        _map.SetSubsurfaceVoxel(obj);
+
+        _subsurfaceVoxelItemUI.Setup(obj);
+        _subsurfaceVoxelItemUI.ResetColor();
+
+        _subsurfaceVoxelSelectorUI.gameObject.SetActive(false);
+    }
+
+    private void _surfaceVoxelSelectorUI_OnValueChanged(VoxelType obj)
+    {
+        Debug.Log("surfaceVoxelSelectorUI event");
+        _map.SetSurfaceVoxel(obj);
+
+        _surfaceVoxelItemUI.Setup(obj);
+        _surfaceVoxelItemUI.ResetColor();
+
+        _surfaceVoxelSelectorUI.gameObject.SetActive(false);
+    }
+
     private void OnUsePerlin(bool value)
     {
         _map.SetUsePerlin(value);

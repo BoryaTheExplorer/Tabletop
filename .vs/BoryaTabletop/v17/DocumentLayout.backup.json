@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|c:\\users\\borys\\desktop\\projects\\boryatabletop\\assets\\code\\map\\ui\\brushsizeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\ui\\brushsizeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\mapvoxeleditor\\voxeleditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\mapvoxeleditor\\voxeleditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\mapvoxeleditor\\ui\\voxelselectorui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\mapvoxeleditor\\ui\\voxelselectorui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|c:\\users\\borys\\desktop\\projects\\boryatabletop\\assets\\code\\map\\ui\\mapconfigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\ui\\mapconfigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\mapvoxeleditor\\ui\\voxelitemui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\mapvoxeleditor\\ui\\voxelitemui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\mapvoxeleditor\\ui\\voxelbrushselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\mapvoxeleditor\\ui\\voxelbrushselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\mapvoxeleditor\\voxeleditortoggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\mapvoxeleditor\\voxeleditortoggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\voxeldatamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\voxeldatamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\mapvoxeleditor\\ui\\voxelitemui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\mapvoxeleditor\\ui\\voxelitemui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\voxeldataso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\voxeldataso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\helpers\\ui\\switchbuttonui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,18 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\mapvoxeleditor\\voxelbrushtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\mapvoxeleditor\\voxelbrushtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|c:\\users\\borys\\desktop\\projects\\boryatabletop\\assets\\code\\map\\mapvoxeleditor\\voxeleditortoggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\mapvoxeleditor\\voxeleditortoggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|c:\\users\\borys\\desktop\\projects\\boryatabletop\\assets\\code\\map\\mapvoxeleditor\\voxeleditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\mapvoxeleditor\\voxeleditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\voxeldataso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\map\\voxeldataso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\map\\voxelhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -134,11 +146,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BrushSizeUI.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\UI\\BrushSizeUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Map\\UI\\BrushSizeUI.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\UI\\BrushSizeUI.cs",
+              "RelativeToolTip": "Assets\\Code\\Map\\UI\\BrushSizeUI.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T12:10:50.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MapConfigUI.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\UI\\MapConfigUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Map\\UI\\MapConfigUI.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\UI\\MapConfigUI.cs",
+              "RelativeToolTip": "Assets\\Code\\Map\\UI\\MapConfigUI.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAUwGcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T18:17:21.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VoxelSelectorUI.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelSelectorUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelSelectorUI.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelSelectorUI.cs",
+              "RelativeToolTip": "Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelSelectorUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T13:43:53.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VoxelItemUI.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelItemUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelItemUI.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelItemUI.cs",
+              "RelativeToolTip": "Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelItemUI.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwCMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T19:30:18.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VoxelDataManager.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\VoxelDataManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Map\\VoxelDataManager.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\VoxelDataManager.cs",
+              "RelativeToolTip": "Assets\\Code\\Map\\VoxelDataManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T20:56:28.875Z"
             },
             {
               "$type": "Document",
@@ -150,25 +225,24 @@
               "RelativeToolTip": "Assets\\Code\\Map\\MapVoxelEditor\\VoxelEditorToggle.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T12:47:51.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T12:47:51.237Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "VoxelEditor.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\VoxelEditor.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\MapVoxelEditor\\VoxelEditor.cs",
               "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\VoxelEditor.cs",
               "RelativeToolTip": "Assets\\Code\\Map\\MapVoxelEditor\\VoxelEditor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-19T08:42:31.766Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "VoxelBrushSelector.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelBrushSelector.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelBrushSelector.cs",
@@ -176,12 +250,11 @@
               "RelativeToolTip": "Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelBrushSelector.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAqwBcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T19:49:17.804Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T19:49:17.804Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "VoxelBrushType.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\VoxelBrushType.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\MapVoxelEditor\\VoxelBrushType.cs",
@@ -189,12 +262,11 @@
               "RelativeToolTip": "Assets\\Code\\Map\\MapVoxelEditor\\VoxelBrushType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T20:00:29.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T20:00:29.719Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "VoxelBrushUI.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelBrushUI.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelBrushUI.cs",
@@ -202,25 +274,11 @@
               "RelativeToolTip": "Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelBrushUI.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T19:46:26.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T19:46:26.271Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VoxelItemUI.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelItemUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelItemUI.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelItemUI.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\MapVoxelEditor\\UI\\VoxelItemUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T19:30:18.525Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "SwitchButtonUI.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Helpers\\UI\\SwitchButtonUI.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Helpers\\UI\\SwitchButtonUI.cs",
@@ -228,21 +286,7 @@
               "RelativeToolTip": "Assets\\Code\\Helpers\\UI\\SwitchButtonUI.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T19:06:36.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "VoxelDataManager.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\VoxelDataManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Map\\VoxelDataManager.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\VoxelDataManager.cs",
-              "RelativeToolTip": "Assets\\Code\\Map\\VoxelDataManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-17T20:56:28.875Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T19:06:36.951Z"
             },
             {
               "$type": "Document",
@@ -252,13 +296,13 @@
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\VoxelDataSO.cs",
               "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\VoxelDataSO.cs",
               "RelativeToolTip": "Assets\\Code\\Map\\VoxelDataSO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-17T20:56:24.358Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "VoxelHelper.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\VoxelHelper.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\VoxelHelper.cs",
@@ -270,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "CameraLocomotion.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\User\\CameraLocomotion.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\User\\CameraLocomotion.cs",
@@ -282,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Map.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Map.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\Map.cs",
@@ -294,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "DiceParser.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Helpers\\DiceParser.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Helpers\\DiceParser.cs",
@@ -306,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "ChatBox.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\ChatBox.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Chat\\ChatBox.cs",
@@ -318,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "MessageParser.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Helpers\\MessageParser.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Helpers\\MessageParser.cs",
@@ -330,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "NetworkGrid.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Grid\\NetworkGrid.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\Grid\\NetworkGrid.cs",
@@ -342,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "DiceRoller.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Dice\\DiceRoller.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Dice\\DiceRoller.cs",
@@ -354,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "RollDiceButtonUI.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\RollDiceButtonUI.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Chat\\RollDiceButtonUI.cs",
@@ -366,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "PlayerHostConnectionService.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\User\\PlayerHostConnectionService.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\User\\PlayerHostConnectionService.cs",
@@ -378,7 +422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "ConnectorTest.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Helpers\\ConnectorTest.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Helpers\\ConnectorTest.cs",
@@ -390,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "GameSession.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Connection\\GameSession.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Connection\\GameSession.cs",
@@ -402,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "PlayersData.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\User\\PlayersData.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\User\\PlayersData.cs",
@@ -414,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Connection\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Connection\\MainMenu.cs",
@@ -426,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "NetworkMessageSender.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Network\\NetworkMessageSender.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Network\\NetworkMessageSender.cs",
@@ -438,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "MessageContainer.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\MessageContainer.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Chat\\MessageContainer.cs",
@@ -450,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "NetworkMessageReceiver.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Network\\NetworkMessageReceiver.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Network\\NetworkMessageReceiver.cs",
@@ -462,7 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "ChatTester.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\ChatTester.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Chat\\ChatTester.cs",
@@ -474,7 +518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "MessageDataConstructorAndSender.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\MessageDataConstructorAndSender.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Messages\\MessageDataConstructorAndSender.cs",
@@ -486,7 +530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "MessageRequest.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\MessageRequest.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Messages\\MessageRequest.cs",
@@ -498,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "MessageContent.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\MessageContent.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Messages\\MessageContent.cs",
@@ -510,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "RollMessageData.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\RollMessageData.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Messages\\RollMessageData.cs",

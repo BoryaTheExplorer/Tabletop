@@ -15,7 +15,7 @@ public class VoxelItemUI : SwitchButtonImageUI
         if (!Clicked)
             base.OnPointerClick(eventData);
     }
-    public void Setup(int x, int y)
+    private void Setup(int x, int y)
     {
         float texX = x / 10f;
         float texY = y / 10f;
@@ -27,5 +27,12 @@ public class VoxelItemUI : SwitchButtonImageUI
         rect.y = texY;
         
         raw.uvRect = rect;
+    }
+    public void Setup(VoxelType type)
+    {
+        Vector2Int uv = VoxelDataManager.VoxelTextureDataDictionary[type].Side;
+
+        Setup(uv.x, uv.y);
+        Voxel = type;
     }
 }
