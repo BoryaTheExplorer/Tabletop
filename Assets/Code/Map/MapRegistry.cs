@@ -59,7 +59,7 @@ public static class MapRegistry
 
         if (SavedMaps.ContainsKey(mapData.Name))
         {
-            Debug.Log($"Map with name '{mapData.Name}' is laready registered");
+            Debug.Log($"Map with name '{mapData.Name}' is already registered");
             return false;
         }
         
@@ -80,7 +80,43 @@ public static class MapRegistry
             Data = data,
             Name = mapData.Name
         }, 
-        $"Maps", $"{mapData.Name}_MapData");
+        "Maps", $"{mapData.Name}_MapData");
+        return true;
+    }
+
+    public static bool SaveChangesToMapData(MapData mapData)
+    {
+        if (mapData == null || mapData.ChunkDataDicitonary.Count == 0)
+        {
+            Debug.Log("Map Data is empty");
+            return false;
+        }
+
+        if (mapData.Name == "" || !SavedMaps.ContainsKey (mapData.Name))
+        {
+            Debug.Log("No corresponding Map Data");
+            return false;
+        }
+
+        SavedMaps[mapData.Name] = mapData;
+
+        List<SerializableChunkData> data = new();
+        foreach (var chunkData in mapData.ChunkDataDicitonary.Values)
+        {
+            data.Add(new SerializableChunkData()
+            {
+                Voxels = chunkData.Voxels,
+                WorldPosition = chunkData.WorldPosition,
+            });
+        }
+
+        SaveAndLoad.Save<SerializableMapData>(new SerializableMapData()
+        {
+            Data = data,
+            Name = mapData.Name
+        },
+        "Maps", $"{mapData.Name}_MapData");
+
         return true;
     }
     public static bool RemoveMapData(string name)

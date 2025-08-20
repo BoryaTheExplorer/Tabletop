@@ -9,6 +9,7 @@ public class Map : MonoBehaviour
 {
     [SerializeField] private GameObject _chunkPrefab;
 
+    public string CurrentMapName { get; private set; } = "";
     public bool UsePerlin { get; private set; } = true;
     public float NoiseScale { get; private set; } = .003f;
     public int FloorHeight { get; private set; } = 25;
@@ -22,9 +23,12 @@ public class Map : MonoBehaviour
     public Dictionary<Vector3Int, ChunkData> ChunkDataDictionary = new Dictionary<Vector3Int, ChunkData>();
     public Dictionary<Vector3Int, ChunkRenderer> ChunkDictionary = new Dictionary<Vector3Int, ChunkRenderer>();
 
-    //SYNC USING CUSTOM MESSAGE
+    public event Action OnMapDataChanged;
+
     public void LoadMapLayout(MapData map)
     {
+        OnMapDataChanged?.Invoke();
+
         ChunkDataDictionary.Clear();
         ChunkDataDictionary = map.ChunkDataDicitonary;
 
@@ -34,6 +38,7 @@ public class Map : MonoBehaviour
         }
         ChunkDictionary.Clear();
 
+        CurrentMapName = map.Name;
         BuildChunks();
     }
 
@@ -51,6 +56,10 @@ public class Map : MonoBehaviour
     }
     public void GenerateMap()
     {
+        OnMapDataChanged?.Invoke();
+
+        CurrentMapName = "";
+
         ChunkDataDictionary.Clear();
         foreach (ChunkRenderer chunk in ChunkDictionary.Values)
         {

@@ -27,25 +27,22 @@ public class VoxelBrushSelector : MonoBehaviour
         {
             case VoxelBrushType.Single:
                 _brushMaterials.SetActive(true);
+                _brushSize.SetActive(false);
                 break;
             case VoxelBrushType.Sphere:
                 _brushMaterials.SetActive(true);
                 _brushSize.SetActive(true);
                 break;
             default:
-                foreach (var brush in _brushes.Values.Where(q => q.Clicked))
-                    brush.ResetColor();
                 _brushMaterials.SetActive(false);
                 _brushSize.SetActive(false);
                 break;
         }
 
+        foreach (var brush in _brushes.Values.Where(q => q.Clicked && q.Brush != obj))
+            brush.ResetColor();
+
         _editor.SetBrushType(obj);
-    }
-
-    private void BrushSphereOnClick()
-    {
-
     }
     private void OnDestroy()
     {

@@ -63,50 +63,35 @@ public class MapConfigUI : MonoBehaviour
         {
             if (_surfaceVoxelSelectorUI)
             {
-                Debug.Log("surfaceVoxelSelectorUI");
-
                 _surfaceVoxelSelectorUI.OnValueChanged += _surfaceVoxelSelectorUI_OnValueChanged;
                 _map.SetSurfaceVoxel(_surfaceVoxelSelectorUI.Voxel);
                 _surfaceVoxelSelectorUI.gameObject.SetActive(false);
 
                 _surfaceVoxelItemUI.OnClick += _surfaceVoxelItemUI_OnClick;
             }
-            else
-            {
-                Debug.Log("no surfaceVoxelSelectorUI");
-            }
             if (_subsurfaceVoxelSelectorUI)
             {
-                Debug.Log("subsurfaceVoxelSelectorUI");
-
                 _subsurfaceVoxelSelectorUI.OnValueChanged += _subsurfaceVoxelSelectorUI_OnValueChanged;
                 _map.SetSubsurfaceVoxel(_subsurfaceVoxelSelectorUI.Voxel);
                 _subsurfaceVoxelSelectorUI.gameObject.SetActive(false);
 
                 _subsurfaceVoxelItemUI.OnClick += _subsurfaceVoxelItemUI_OnClick;
             }
-            else
-            {
-                Debug.Log("no subsurfaceVoxelSelectorUI");
-            }
         }
     }
 
     private void _subsurfaceVoxelItemUI_OnClick(VoxelType obj)
     {
-        Debug.Log("subsurfaceVoxelItemUI event");
         _subsurfaceVoxelSelectorUI.gameObject.SetActive(true);
     }
 
     private void _surfaceVoxelItemUI_OnClick(VoxelType obj)
     {
-        Debug.Log("surfaceVoxelItemUI event");
         _surfaceVoxelSelectorUI.gameObject.SetActive(true);
     }
 
     private void _subsurfaceVoxelSelectorUI_OnValueChanged(VoxelType obj)
     {
-        Debug.Log("subsurfaceVoxelSelectorUI event");
         _map.SetSubsurfaceVoxel(obj);
 
         _subsurfaceVoxelItemUI.Setup(obj);
@@ -117,7 +102,6 @@ public class MapConfigUI : MonoBehaviour
 
     private void _surfaceVoxelSelectorUI_OnValueChanged(VoxelType obj)
     {
-        Debug.Log("surfaceVoxelSelectorUI event");
         _map.SetSurfaceVoxel(obj);
 
         _surfaceVoxelItemUI.Setup(obj);

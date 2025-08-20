@@ -2,6 +2,7 @@ using UnityEngine;
 using Unity.Netcode;
 using System.Collections.Generic;
 using System;
+using System.Collections;
 public class Dice : NetworkBehaviour
 {
     [SerializeField] private List<Transform> _sides = new List<Transform>();
@@ -31,7 +32,7 @@ public class Dice : NetworkBehaviour
                 int result = GetRollOutcome();
                 _rolling = false;
 
-                Debug.Log(result);
+                StartCoroutine(DestroyInCoroutine(10));
                 OnDiceRolled?.Invoke(result);
             }
         }
@@ -71,5 +72,12 @@ public class Dice : NetworkBehaviour
 
         _rolling = true;
         _timer = _countdown;
+    }
+
+    public IEnumerator DestroyInCoroutine(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        Destroy(gameObject);
     }
 }

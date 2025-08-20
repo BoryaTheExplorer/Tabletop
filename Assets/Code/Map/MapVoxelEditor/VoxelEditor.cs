@@ -18,9 +18,12 @@ public class VoxelEditor : MonoBehaviour
     public VoxelType VoxelToPaint {  get { return _voxelToPaint; } }
 
     private Dictionary<Vector3Int, VoxelType> _history = new Dictionary<Vector3Int, VoxelType>();
+    private void Start()
+    {
+        _map.OnMapDataChanged += ClearHistory;
+    }
     private void OnEnable()
     {
-        _history.Clear();
         _voxelSelector.OnValueChanged += _voxelSelector_OnValueChanged;
         GameInput.Instance.OnClickPerformed += GameInput_OnClickPerformed;
         GameInput.Instance.OnRightClickPerformed += GameInput_OnRightClickPerformed;
@@ -172,6 +175,10 @@ public class VoxelEditor : MonoBehaviour
         _map.UpdateModifiedChunks();
         _networkMap.SendUpdateMapRpc(NetworkManager.Singleton.LocalClientId);
     }
+    public void ClearHistory()
+    {
+        _history.Clear();
+    }
 
     public void SetBrushType(VoxelBrushType brushType)
     {
@@ -188,6 +195,9 @@ public class VoxelEditor : MonoBehaviour
 
     private void OnDisable()
     {
+        MapRegistry.SaveChangesToMapData(new MapData(_map.ChunkDataDictionary, _map.CurrentMapName));
+        _history.Clear();
+
         GameInput.Instance.OnClickPerformed -= GameInput_OnClickPerformed;
         GameInput.Instance.OnRightClickPerformed -= GameInput_OnRightClickPerformed;
     }
