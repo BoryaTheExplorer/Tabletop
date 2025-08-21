@@ -18,12 +18,28 @@ public class PlayGrid : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void AddGridObject(GridObject gridObject, Vector3Int position)
+    public void AddGridObject(Vector3Int position, GridObject gridObject)
     {
-        if(!_grid.ContainsKey(position))
-            _grid.Add(position, gridObject);
+        if(_grid.ContainsKey(position))
+        {
+            Debug.LogWarning($"Grid cell '{position}' is busy and can't be overriden");
+            return;
+        }
+
+        _grid.Add(position, gridObject);
     }
-    public void SpawnGridObject(int id, Vector3 position)
+    public void MoveGridObject(GridObject gridObject, Vector3Int position)
+    {
+        if (!_grid.Remove(gridObject.GridPosition))
+        {
+            Debug.LogWarning($"Can't move {gridObject.name} at {gridObject.GridPosition}, since there is no corresponding object in the Dictionary");
+            return;
+        }
+
+        gridObject.Move(position);
+        AddGridObject(position, gridObject);
+    }
+    public GridObject SpawnGridObject(int id, Vector3 position)
     {
         int x = Mathf.FloorToInt(position.x);
         int y = Mathf.FloorToInt(position.y);
@@ -32,11 +48,14 @@ public class PlayGrid : MonoBehaviour
         Vector3Int newPosition = new Vector3Int(x, y, z);
         
         GridObject obj = Instantiate(GridObjectDataManager.MiniaturesSO.GetGridObject(id), newPosition, Quaternion.identity);
-        AddGridObject(obj, newPosition);
+        obj.Init(newPosition);
+
+        AddGridObject(newPosition, obj);
+        return obj;
     }
     
     public void RemoveGridObject(GridObject gridObject)
     {
-
+        //I'll do it later...
     }
 }

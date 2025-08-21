@@ -21,9 +21,9 @@ public static class GridObjectScanner
             return false;
         }
 
-        int x = Mathf.FloorToInt(hit.point.x + (hit.normal * .5f).x);
-        int y = Mathf.FloorToInt(hit.point.y + (hit.normal * .5f).y);
-        int z = Mathf.FloorToInt(hit.point.z + (hit.normal * .5f).z);
+        int x = Mathf.FloorToInt(hit.point.x + .5f + (hit.normal * .5f).x);
+        int y = Mathf.FloorToInt(hit.point.y + .5f + (hit.normal * .5f).y);
+        int z = Mathf.FloorToInt(hit.point.z + .5f + (hit.normal * .5f).z);
 
         position = new Vector3Int(x, y, z);
 

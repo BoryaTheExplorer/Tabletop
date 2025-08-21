@@ -45,7 +45,7 @@ public class NetworkPlayGrid : NetworkBehaviour
     [ClientRpc()]
     public void ReceiveGridObjectClientRpc(ulong clientId, int gridObjectId, int x, int y, int z, ClientRpcParams rpcParams = default)
     {
-        _playGrid.SpawnGridObject(gridObjectId, new Vector3(x, y, z));
+        _playGrid.SpawnGridObject(gridObjectId, new Vector3(x, y, z)).Init(new Vector3Int(x, y, z));
     }
 
     [ServerRpc(RequireOwnership = false)]

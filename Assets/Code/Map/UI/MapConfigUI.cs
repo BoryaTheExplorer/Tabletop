@@ -15,14 +15,19 @@ public class MapConfigUI : MonoBehaviour
     [SerializeField] private Toggle _usePerlin;
     [SerializeField] private Slider _perlinSlider;
     [SerializeField] private TMP_InputField _perlinInput;
+    private bool _useNoise;
+    private float _noiseScale;
     [Header("Height")]
     [SerializeField] private Slider _heightSlider;
     [SerializeField] private TMP_InputField _heightInput;
+    private int _height;
     [Header("Voxels")]
     [SerializeField] private VoxelSelectorUI _surfaceVoxelSelectorUI;
     [SerializeField] private VoxelItemUI _surfaceVoxelItemUI;
+    private VoxelType _surfaceVoxel;
     [SerializeField] private VoxelSelectorUI _subsurfaceVoxelSelectorUI;
     [SerializeField] private VoxelItemUI _subsurfaceVoxelItemUI;
+    private VoxelType _subsurfaceVoxel;
 
     private void Start()
     {
@@ -34,6 +39,8 @@ public class MapConfigUI : MonoBehaviour
         {
             if (_usePerlin)
                 _usePerlin.onValueChanged.AddListener(OnUsePerlin);
+            _useNoise = _map.UsePerlin;
+
             if (_perlinSlider)
             {
                 _perlinSlider.onValueChanged.AddListener(OnPerlinSliderValueChanged);
@@ -44,7 +51,7 @@ public class MapConfigUI : MonoBehaviour
                 _perlinInput.onValueChanged.AddListener(OnPerlinInputValueChanged);
                 _perlinInput.SetTextWithoutNotify(_map.NoiseScale.ToString());
             }
-                
+            _noiseScale = _map.NoiseScale;
         }
         //Height
         {
@@ -58,6 +65,7 @@ public class MapConfigUI : MonoBehaviour
                 _heightInput.onValueChanged.AddListener(OnHeightInputValueChanged);
                 _heightInput.SetTextWithoutNotify(_map.FloorHeight.ToString());
             }
+            _height = _map.FloorHeight;
         }
         //Voxels
         {
@@ -77,6 +85,8 @@ public class MapConfigUI : MonoBehaviour
 
                 _subsurfaceVoxelItemUI.OnClick += _subsurfaceVoxelItemUI_OnClick;
             }
+            _surfaceVoxel = _map.SurfaceVoxel;
+            _subsurfaceVoxel = _map.SubsurfaceVoxel;
         }
     }
 
@@ -93,6 +103,7 @@ public class MapConfigUI : MonoBehaviour
     private void _subsurfaceVoxelSelectorUI_OnValueChanged(VoxelType obj)
     {
         _map.SetSubsurfaceVoxel(obj);
+        _subsurfaceVoxel = obj;
 
         _subsurfaceVoxelItemUI.Setup(obj);
         _subsurfaceVoxelItemUI.ResetColor();
@@ -103,6 +114,7 @@ public class MapConfigUI : MonoBehaviour
     private void _surfaceVoxelSelectorUI_OnValueChanged(VoxelType obj)
     {
         _map.SetSurfaceVoxel(obj);
+        _surfaceVoxel = obj;
 
         _surfaceVoxelItemUI.Setup(obj);
         _surfaceVoxelItemUI.ResetColor();
@@ -113,6 +125,7 @@ public class MapConfigUI : MonoBehaviour
     private void OnUsePerlin(bool value)
     {
         _map.SetUsePerlin(value);
+        _useNoise = value;
     }
     private void OnPerlinSliderValueChanged(float value)
     {
@@ -120,6 +133,7 @@ public class MapConfigUI : MonoBehaviour
             return;
 
         _map.SetPerlinScale(value);
+        _noiseScale = value;
         _perlinInput.SetTextWithoutNotify(value.ToString());
     }
     private void OnPerlinInputValueChanged(string value)
@@ -130,6 +144,7 @@ public class MapConfigUI : MonoBehaviour
             return;
 
         _map.SetPerlinScale(perlin);
+        _noiseScale = perlin;
         _perlinSlider.SetValueWithoutNotify(perlin);
     }
 
@@ -139,6 +154,8 @@ public class MapConfigUI : MonoBehaviour
             return;
 
         _map.SetFloorHeight(Mathf.FloorToInt(value));
+        _height = (int)value;
+
         _heightInput.SetTextWithoutNotify(value.ToString());
     }
     private void OnHeightInputValueChanged(string value)
@@ -149,6 +166,8 @@ public class MapConfigUI : MonoBehaviour
             return;
 
         _map.SetFloorHeight(height);
+        _height = height;
+
         _heightSlider.SetValueWithoutNotify(height);
     }
 
@@ -170,9 +189,9 @@ public class MapConfigUI : MonoBehaviour
 
         _map.SetSubsurfaceVoxel(voxel);
     }
-    public void Generate()
+    public void GenerateMap()
     {
         _map.GenerateMap();
-
+        _networkMap.GenerateMapClientRpc(_useNoise, _noiseScale, _height, (int)_surfaceVoxel, (int)_subsurfaceVoxel);
     }
 }

@@ -8,6 +8,7 @@ using UnityEngine;
 public class NetworkMapSender : NetworkBehaviour
 {
     [SerializeField] private Map _map;
+    [SerializeField] private NetworkMap _networkMap;
 
     private const int MAX_PAYLOAD = 1200;
     private const float ACK_TIMEOUT = 15f;
@@ -17,6 +18,7 @@ public class NetworkMapSender : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         if (IsServer)
+        {
             NetworkManager.Singleton.OnClientConnectedCallback += (clientId) =>
             {
                 if (clientId == NetworkManager.Singleton.LocalClientId)
@@ -27,7 +29,8 @@ public class NetworkMapSender : NetworkBehaviour
 
                 Dictionary<string, List<SerializableChunkData>> maps = new Dictionary<string, List<SerializableChunkData>>();
 
-                foreach (var map in MapRegistry.SavedMaps){
+                foreach (var map in MapRegistry.SavedMaps)
+                {
                     maps[map.Key] = new List<SerializableChunkData>();
 
                     foreach (var chunkData in map.Value.ChunkDataDicitonary.Values)
@@ -38,8 +41,13 @@ public class NetworkMapSender : NetworkBehaviour
                     SendMapToClient(clientId, maps[map.Key], map.Key);
                 }
             };
+        }
     }
 
+    //Use this to send current unregistered map to arriving clients
+    public void SendCurrentMapWithoutKey()
+    {
+    }
     public void SendMapKeyToClient(ulong clientId, string mapKey)
     {
         using var writer = new FastBufferWriter(FastBufferWriter.GetWriteSize(mapKey, false), Allocator.Temp);

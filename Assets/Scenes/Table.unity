@@ -4156,8 +4156,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 325602568}
-        m_TargetAssemblyTypeName: Map, Assembly-CSharp
+      - m_Target: {fileID: 1639299209}
+        m_TargetAssemblyTypeName: MapConfigUI, Assembly-CSharp
         m_MethodName: GenerateMap
         m_Mode: 1
         m_Arguments:
@@ -13499,6 +13499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   _map: {fileID: 325602568}
+  _networkMap: {fileID: 0}
 --- !u!1 &1526073622
 GameObject:
   m_ObjectHideFlags: 0
@@ -16056,8 +16057,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectToDestroyOnClients:
   - {fileID: 961847105}
-  - {fileID: 1011514712}
-  - {fileID: 1417219802}
 --- !u!1 &1903220940
 GameObject:
   m_ObjectHideFlags: 0

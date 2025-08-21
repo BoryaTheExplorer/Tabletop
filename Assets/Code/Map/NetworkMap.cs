@@ -59,6 +59,21 @@ public class NetworkMap : NetworkBehaviour
     }
 
     [ClientRpc()]
+    public void GenerateMapClientRpc(bool useNoise, float noise, int height, int surfaceVoxel, int subsurfaceVoxel)
+    {
+        if (IsServer) 
+            return;
+        
+        _map.SetUsePerlin(useNoise);
+        _map.SetPerlinScale(noise);
+        _map.SetFloorHeight(height);
+        _map.SetSurfaceVoxel((VoxelType)surfaceVoxel);
+        _map.SetSubsurfaceVoxel((VoxelType)subsurfaceVoxel);
+
+        _map.GenerateMap();
+    }
+
+    [ClientRpc()]
     public void UpdateMapClientRpc(ulong clientId)
     {
         if (NetworkManager.Singleton.LocalClientId == clientId)
