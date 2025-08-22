@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Unity.Burst.CompilerServices;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -45,16 +46,43 @@ public class NetworkPlayGrid : NetworkBehaviour
     [ClientRpc()]
     public void ReceiveGridObjectClientRpc(ulong clientId, int gridObjectId, int x, int y, int z, ClientRpcParams rpcParams = default)
     {
-        _playGrid.SpawnGridObject(gridObjectId, new Vector3(x, y, z)).Init(new Vector3Int(x, y, z));
+        Vector3Int position = new Vector3Int(x, y, z);
+        if (!_playGrid.Grid.ContainsKey(position))
+            _playGrid.SpawnGridObject(gridObjectId, position).Init(position);
+    }
+    [ClientRpc()]
+    public void ReceiveAndCheckGridObjectClientRpc(ulong clientId, int gridObjectId, int x, int y, int z)
+    {
+        Debug.Log($"Client Id: {clientId}, Local Client Id: {NetworkManager.Singleton.LocalClientId}");
+        if (clientId == NetworkManager.Singleton.LocalClientId)
+            return;
+        Vector3Int position = new Vector3Int(x, y, z);
+        _playGrid.SpawnGridObject(gridObjectId, position).Init(position);
     }
 
     [ServerRpc(RequireOwnership = false)]
-    public void SpawnGridObjectServerRpc(ulong clientId, int gridObjectId, int x, int y, int z)
+    public void SpawnGridObjectServerRpc(ulong clientId, int gridObjectId, int x, int y, int z, ServerRpcParams rpcParams = default)
+    {
+        ReceiveAndCheckGridObjectClientRpc(clientId, gridObjectId, x, y, z);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void MoveObjectServerRpc(int xOriginal, int yOriginal, int zOriginal, int xNew, int yNew, int zNew, ServerRpcParams rpcParams = default)
+    {
+        Vector3Int key = new Vector3Int(xOriginal, yOriginal, zOriginal);
+        if (_playGrid.Grid.ContainsKey(key))
+            MoveObjectClientRpc(xOriginal, yOriginal, zOriginal, xNew, yNew, zNew, rpcParams.Receive.SenderClientId);
+    }
+
+    [ClientRpc()]
+    public void MoveObjectClientRpc(int xOriginal, int yOriginal, int zOriginal, int xNew, int yNew, int zNew, ulong clientId)
     {
         if (clientId == NetworkManager.Singleton.LocalClientId)
             return;
 
-        _playGrid.SpawnGridObject(gridObjectId, new Vector3(x, y, z));
-    }
+        Vector3Int key = new Vector3Int(xOriginal, yOriginal, zOriginal);
+        Vector3Int position = new Vector3Int(xNew, yNew, zNew);
 
+        _playGrid.MoveGridObject(key, position);
+    }
 }

@@ -39,6 +39,15 @@ public class PlayGrid : MonoBehaviour
         gridObject.Move(position);
         AddGridObject(position, gridObject);
     }
+    public void MoveGridObject(Vector3Int key, Vector3Int position)
+    {
+        if (!_grid.TryGetValue(key, out GridObject obj))
+            return;
+
+        obj.Move(position);
+        _grid.Remove(key);
+        AddGridObject(key, obj);
+    }
     public GridObject SpawnGridObject(int id, Vector3 position)
     {
         int x = Mathf.FloorToInt(position.x);

@@ -36,7 +36,12 @@ public class PlayerGridInteractor : NetworkBehaviour
         else
         {
             _selectedObject.Deselect();
+
+            Vector3Int pos = _selectedObject.GridPosition;
+            _networkGrid.MoveObjectServerRpc(pos.x, pos.y, pos.z, position.x, position.y, position.z);
+
             PlayGrid.Instance.MoveGridObject(_selectedObject, position);
+            
             _selectedObject = null;
         }
     }
