@@ -7,5 +7,6 @@ public enum AbilityScore
     Constitution,
     Intelligence,
     Wisdom,
-    Charisma
+    Charisma,
+    Misc
 }

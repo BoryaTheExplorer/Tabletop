@@ -7,9 +7,18 @@ public class Skill
     public ProficiencyType Proficiency { get; private set; } = ProficiencyType.None;
     public int RollBonus { get; private set; } = 0;
 
+    //ADD UI SUPPORT
+
     public Skill()
     {
 
+    }
+    public Skill(Skill skill)
+    {
+        Name = skill.Name;
+        ScalingAbility = skill.ScalingAbility;
+        Proficiency = skill.Proficiency;
+        RollBonus = skill.RollBonus;
     }
     public Skill(string name, AbilityScore scalingAbility, ProficiencyType proficiency = ProficiencyType.None, int rollBonus = 0)
     {
@@ -20,7 +29,10 @@ public class Skill
     }
     public Skill(BasicSkill basicSkill, AbilityScore scalingAbility, ProficiencyType proficiency = ProficiencyType.None, int rollBonus = 0)
     {
-        string name = basicSkill.ToString();
+        this.Name = basicSkill.ToString();
+        this.ScalingAbility = scalingAbility;
+        this.Proficiency = proficiency;
+        this.RollBonus = rollBonus;
     }
     public void SetName(string name)
     {
