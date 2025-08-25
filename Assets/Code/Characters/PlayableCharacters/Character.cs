@@ -5,8 +5,8 @@ using UnityEngine;
 public class Character
 {
     public string Name { get; private set; } = "Character Name";
-    
-    public int HealthPoints { get; private set; }
+
+    public Health Health { get; private set; } = new Health();
     public ArmorClass ArmorClass { get; private set; } = new ArmorClass();
 
     public Dictionary<CharacterClass, int> CharacterClassLevels { get; private set; } = new Dictionary<CharacterClass, int>();
@@ -25,9 +25,10 @@ public class Character
         ArmorClass.OnPrimaryScalingAbilityChanged += ArmorClass_OnPrimaryScalingAbilityChanged;
         ArmorClass.OnSecondaryScalingAbilityChanged += ArmorClass_OnSecondaryScalingAbilityChanged;
     }
-    public Character(string name, Dictionary<AbilityScore, int> abilityScores, List<Skill> skillList) : this()
+    public Character(string name, Health health, Dictionary<AbilityScore, int> abilityScores, List<Skill> skillList) : this()
     {
         this.Name = name;
+        this.Health = health;
         this.AbilityScores = abilityScores;
         this.SkillList = skillList;
     }
@@ -59,6 +60,14 @@ public class Character
         {
             skill.SetProficiency(proficiency);
         }
+    }
+    //COMBAT
+    public void Damage(Damage damage)
+    {
+        if (damage == null)
+            return;
+
+        Health.Damage(damage.Type, damage.Points);
     }
 
     //AC
