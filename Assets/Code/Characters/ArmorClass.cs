@@ -10,6 +10,7 @@ public class ArmorClass
     public AbilityScore SecondaryScalingAbility { get; private set; } = AbilityScore.Misc;
     public int SecondaryModifier { get; private set; }
     public int SecondaryLimit { get; private set; } = 0;
+    public int FlatBonus { get; private set; } = 0;
 
     public int Total => BaseAC + ((PrimaryLimit > 0) ? Mathf.Min(PrimaryModifier, PrimaryLimit) : PrimaryModifier) 
                                + ((SecondaryLimit > 0) ? Mathf.Min(SecondaryModifier, SecondaryLimit) : SecondaryModifier);
@@ -74,5 +75,19 @@ public class ArmorClass
 
         SecondaryLimit = limit;
         OnSecondaryLimitChanged?.Invoke(limit);
+    }
+    public void AddFlatBonus(int bonus)
+    {
+        if (bonus <= 0)
+            return;
+
+        FlatBonus += bonus;
+    }
+    public void SubtractFlatBonus(int bonus)
+    {
+        if (bonus <= 0) 
+            return;
+
+        FlatBonus -= bonus;
     }
 }

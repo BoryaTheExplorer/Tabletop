@@ -8,8 +8,8 @@ public class Character
 
     public Health Health { get; private set; } = new Health();
     public ArmorClass ArmorClass { get; private set; } = new ArmorClass();
-
     public Dictionary<CharacterClass, int> CharacterClassLevels { get; private set; } = new Dictionary<CharacterClass, int>();
+    public int Level { get; private set; } = 0;
     public Dictionary<AbilityScore, int> AbilityScores { get; private set; } = new Dictionary<AbilityScore, int>() {
         { AbilityScore.Strength,     10 },
         { AbilityScore.Dexterity,    10 },
@@ -18,6 +18,7 @@ public class Character
         { AbilityScore.Wisdom,       10 },
         { AbilityScore.Charisma,     10 }
     };
+    public int ProficiencyBonus => 2 + (Level - 1) / 4;
     public List<Skill> SkillList { get; private set; } = BasicSkillsProvider.BasicSkills.Select(s => new Skill(s)).ToList();
 
     public Character()

@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class Health
 {
-    public int Points { get; private set; } = 1;
+    public int MaxPoints { get; private set; } = 1;
+    public int CurrentPoints { get; private set; }
     public List<DamageType> Immunities { get; private set; } = new List<DamageType>();
     public List<DamageType> Resistances { get; private set; } = new List<DamageType>();
     public List<DamageType> Vulnerabilities { get; private set; } = new List<DamageType>();
@@ -12,18 +13,23 @@ public class Health
     {
 
     }
-    public Health(int points, List<DamageType> immunities = default, List<DamageType> resistances = default, List<DamageType> vulnerabilities = default)
+    public Health(int maxPoints, int currentPoints, List<DamageType> immunities = null, List<DamageType> resistances = null, List<DamageType> vulnerabilities = null)
     {
-        this.Points = points;
+        this.MaxPoints = maxPoints;
+        this.CurrentPoints = currentPoints;
 
-        if (immunities != default) 
+        if (immunities != null) 
             this.Immunities = immunities;
 
-        if (resistances != default)
+        if (resistances != null)
             this.Resistances = resistances;
 
-        if (vulnerabilities != default)
+        if (vulnerabilities != null)
             this.Vulnerabilities = vulnerabilities;
+    }
+    public Health(int points, List<DamageType> immunities = null, List<DamageType> resistances = null, List<DamageType> vulnerabilities = null) : this(points, points, immunities, resistances, vulnerabilities)
+    {
+
     }
 
     public bool Damage(DamageType damageType, int damage)
@@ -40,7 +46,7 @@ public class Health
         if (Vulnerabilities.Contains(damageType))
             damage *= 2;
 
-        Points -= damage;
+        MaxPoints -= damage;
         return true;
     }
 
