@@ -13,7 +13,7 @@ public class VoxelBrushSelector : MonoBehaviour
     
     private void Start()
     {
-        _brushes = _serializableBrushes.GetDictionary();
+        _brushes = _serializableBrushes.ToDictionary();
 
         foreach (var brush in _brushes.Values )
         {

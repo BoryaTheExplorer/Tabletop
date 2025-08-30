@@ -5,7 +5,7 @@ using UnityEngine;
 public class MiniaturesSO : ScriptableObject
 {
     public SerializableDictionary<int, GridObject> SerializableDictionary = new SerializableDictionary<int, GridObject>();
-    public Dictionary<int, GridObject> Dictionary { get { return SerializableDictionary.GetDictionary(); } }
+    public Dictionary<int, GridObject> Dictionary { get { return SerializableDictionary.ToDictionary(); } }
     public GridObject GetGridObject(int id)
     {
         if (Dictionary.ContainsKey(id))

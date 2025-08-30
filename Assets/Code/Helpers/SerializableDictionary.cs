@@ -7,7 +7,7 @@ public class SerializableDictionary<TKey, TValue>
 {
     public List<SerializableKVP<TKey, TValue>> List = new List<SerializableKVP<TKey, TValue>>();
 
-    public Dictionary<TKey, TValue> GetDictionary()
+    public Dictionary<TKey, TValue> ToDictionary()
     {
         Dictionary<TKey, TValue> dict = new Dictionary<TKey, TValue>();
 
