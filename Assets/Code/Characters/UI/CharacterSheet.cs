@@ -5,17 +5,27 @@ using UnityEngine;
 public class CharacterSheet : MonoBehaviour
 {
     private Character _character;
-    [SerializeField] private TextMeshProUGUI _name;
+    [Header("Name")]
+    [SerializeField] private TMP_InputField _name;
+    [Header("Class Icons")]
+    [SerializeField] private ClassIcon _classIconPrefab;
+    [SerializeField] private Transform _iconTarget;
+    [Header("Ability Scores")]
     [SerializeField] private SerializableDictionary<AbilityScore, TextMeshProUGUI> _abilityScoresSerializable = new SerializableDictionary<AbilityScore, TextMeshProUGUI>();
     private Dictionary<AbilityScore, TextMeshProUGUI> _abilityScores = new Dictionary<AbilityScore, TextMeshProUGUI>();
 
     public void Start()
     {
-        Debug.Log("AAAAAAAAAAAAAAAAAA");
         _character = new Character("Borys, Knight of the Vale", new Health(10));
+        
+        _character.AddClassLevel(CharacterClassKey.Paladin);
+        _character.AddClassLevel(CharacterClassKey.Paladin);
+        _character.AddClassLevel(CharacterClassKey.Paladin);
+
+        _character.AddClassLevel(CharacterClassKey.Rogue);
 
         if (_name != null)
-            _name.text = _character.Name;
+            _name.SetTextWithoutNotify(_character.Name);
 
         _abilityScores = _abilityScoresSerializable.ToDictionary();
 
@@ -23,6 +33,14 @@ public class CharacterSheet : MonoBehaviour
         {
             score.Value.text = ((_character.AbilityScores[score.Key] >= 10) ? "+" : "") + ((_character.AbilityScores[score.Key] - 10) / 2).ToString();
             Debug.Log("Ability Score: " + score.Key + " | " + score.Value);
+        }
+
+        ClassIcon icon;
+
+        foreach (var characterClass in _character.CharacterClasses)
+        {
+            icon = Instantiate(_classIconPrefab, _iconTarget);
+            icon.Init(characterClass.Key, characterClass.Level);
         }
     }
 }

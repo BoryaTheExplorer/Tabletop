@@ -3,15 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|c:\\users\\borys\\desktop\\projects\\boryatabletop\\assets\\code\\characters\\ui\\classspritedictionaryso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\characters\\ui\\classspritedictionaryso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|c:\\users\\borys\\desktop\\projects\\boryatabletop\\assets\\code\\characters\\ui\\classicon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\characters\\ui\\classicon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\characters\\ui\\charactersheet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\characters\\ui\\charactersheet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\helpers\\serializabledictionary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\helpers\\serializabledictionary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\characters\\playablecharacters\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\characters\\playablecharacters\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|c:\\users\\borys\\desktop\\projects\\boryatabletop\\assets\\code\\characters\\characterclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\characters\\characterclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\characters\\characterclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|c:\\users\\borys\\desktop\\projects\\boryatabletop\\assets\\code\\characters\\characterclasskey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\assets\\code\\characters\\characterclasskey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0345F56F-6148-F4B6-6D01-AC9C0E88966C}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\characters\\characterclasskey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -118,7 +134,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -126,7 +142,69 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClassSpriteDictionarySO.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\UI\\ClassSpriteDictionarySO.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Characters\\UI\\ClassSpriteDictionarySO.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\UI\\ClassSpriteDictionarySO.cs",
+              "RelativeToolTip": "Assets\\Code\\Characters\\UI\\ClassSpriteDictionarySO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T11:24:09.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ClassIcon.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\UI\\ClassIcon.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Characters\\UI\\ClassIcon.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\UI\\ClassIcon.cs",
+              "RelativeToolTip": "Assets\\Code\\Characters\\UI\\ClassIcon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T11:19:46.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SerializableDictionary.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Helpers\\SerializableDictionary.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Helpers\\SerializableDictionary.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Helpers\\SerializableDictionary.cs",
+              "RelativeToolTip": "Assets\\Code\\Helpers\\SerializableDictionary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T09:42:09.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CharacterSheet.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\UI\\CharacterSheet.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Characters\\UI\\CharacterSheet.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\UI\\CharacterSheet.cs",
+              "RelativeToolTip": "Assets\\Code\\Characters\\UI\\CharacterSheet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T09:39:30.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\PlayableCharacters\\Character.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Characters\\PlayableCharacters\\Character.cs",
+              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\PlayableCharacters\\Character.cs",
+              "RelativeToolTip": "Assets\\Code\\Characters\\PlayableCharacters\\Character.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAkwBAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T13:03:27.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "CharacterClass.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\CharacterClass.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Characters\\CharacterClass.cs",
@@ -134,12 +212,11 @@
               "RelativeToolTip": "Assets\\Code\\Characters\\CharacterClass.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T09:23:47.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-30T09:23:47.325Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Health.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\Health.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Characters\\Health.cs",
@@ -151,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "CharacterClassKey.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\CharacterClassKey.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Characters\\CharacterClassKey.cs",
@@ -159,12 +236,11 @@
               "RelativeToolTip": "Assets\\Code\\Characters\\CharacterClassKey.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T13:43:28.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-24T13:43:28.032Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "AbilityScore.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\AbilityScore.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Characters\\AbilityScore.cs",
@@ -176,20 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Character.cs",
-              "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\PlayableCharacters\\Character.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Characters\\PlayableCharacters\\Character.cs",
-              "ToolTip": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\PlayableCharacters\\Character.cs",
-              "RelativeToolTip": "Assets\\Code\\Characters\\PlayableCharacters\\Character.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA9wCgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T13:03:27.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Skill.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\Skill.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Characters\\Skill.cs",
@@ -201,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "BasicSkillsProvider.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Characters\\BasicSkillsProvider.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Characters\\BasicSkillsProvider.cs",
@@ -213,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "ClientServerVoxelEditorUI.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\UI\\ClientServerVoxelEditorUI.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\UI\\ClientServerVoxelEditorUI.cs",
@@ -225,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "RpcMessages.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Library\\PackageCache\\com.unity.netcode.gameobjects@837011a5fcd5\\Runtime\\Messaging\\Messages\\RpcMessages.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.netcode.gameobjects@837011a5fcd5\\Runtime\\Messaging\\Messages\\RpcMessages.cs",
@@ -238,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "MapConfigUI.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\UI\\MapConfigUI.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\UI\\MapConfigUI.cs",
@@ -250,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "GridObjectScanner.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Grid\\GridObjectScanner.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\Grid\\GridObjectScanner.cs",
@@ -262,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "PlayGrid.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Grid\\PlayGrid.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\Grid\\PlayGrid.cs",
@@ -274,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Dice.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Dice\\Dice.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Dice\\Dice.cs",
@@ -286,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "PlayerGridInteractor.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Grid\\PlayerGridInteractor.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\Grid\\PlayerGridInteractor.cs",
@@ -298,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "NetworkPlayGrid.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Grid\\NetworkPlayGrid.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\Grid\\NetworkPlayGrid.cs",
@@ -310,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "VoxelEditor.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\VoxelEditor.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\MapVoxelEditor\\VoxelEditor.cs",
@@ -322,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "NetworkMapSender.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Network\\NetworkMapSender.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\Network\\NetworkMapSender.cs",
@@ -334,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "GridObjectDataManager.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Grid\\GridObjectDataManager.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\Grid\\GridObjectDataManager.cs",
@@ -346,7 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "MiniaturesSO.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Grid\\MiniaturesSO.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\Grid\\MiniaturesSO.cs",
@@ -358,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "VoxelMapScanner.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapVoxelEditor\\VoxelMapScanner.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\MapVoxelEditor\\VoxelMapScanner.cs",
@@ -370,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "GridObject.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Grid\\GridObject.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\Grid\\GridObject.cs",
@@ -382,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "MessageDataConstructorAndSender.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Chat\\Messages\\MessageDataConstructorAndSender.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Chat\\Messages\\MessageDataConstructorAndSender.cs",
@@ -394,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "NetworkMapReceiver.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Network\\NetworkMapReceiver.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\Network\\NetworkMapReceiver.cs",
@@ -406,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "NetworkMap.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\NetworkMap.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\NetworkMap.cs",
@@ -418,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "Map.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\Map.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\Map.cs",
@@ -430,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "MapRegistry.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\MapRegistry.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\MapRegistry.cs",
@@ -442,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "MapSaveMenuUI.cs",
               "DocumentMoniker": "C:\\Users\\Borys\\Desktop\\Projects\\BoryaTabletop\\Assets\\Code\\Map\\UI\\MapSaveMenuUI.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Map\\UI\\MapSaveMenuUI.cs",
