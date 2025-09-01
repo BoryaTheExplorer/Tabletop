@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public static class BasicSkillsProvider
@@ -23,4 +24,8 @@ public static class BasicSkillsProvider
         new Skill(BasicSkill.Stealth,        AbilityScore.Dexterity),
         new Skill(BasicSkill.Survival,       AbilityScore.Wisdom)
     };
+    public static List<Skill> GetBasicSkills()
+    {
+        return BasicSkills.Select(s => new Skill(s)).ToList();
+    }
 }

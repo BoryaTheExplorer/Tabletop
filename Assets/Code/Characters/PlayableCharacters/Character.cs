@@ -10,6 +10,8 @@ public class Character
 
     public Health Health { get; private set; } = new Health();
     public ArmorClass ArmorClass { get; private set; } = new ArmorClass();
+    public int Speed { get; private set; } = 30;
+    public int Initiative => (AbilityScores[AbilityScore.Dexterity] - 10) / 2;
     public List<CharacterClass> CharacterClasses { get; private set; } = new List<CharacterClass>();
     public int Level { get; private set; } = 0;
     public Dictionary<AbilityScore, int> AbilityScores { get; private set; } = new Dictionary<AbilityScore, int>() {

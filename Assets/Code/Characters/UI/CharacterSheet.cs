@@ -5,14 +5,22 @@ using UnityEngine;
 public class CharacterSheet : MonoBehaviour
 {
     private Character _character;
+
     [Header("Name")]
     [SerializeField] private TMP_InputField _name;
+
     [Header("Class Icons")]
     [SerializeField] private ClassIcon _classIconPrefab;
     [SerializeField] private Transform _iconTarget;
+
     [Header("Ability Scores")]
     [SerializeField] private SerializableDictionary<AbilityScore, TextMeshProUGUI> _abilityScoresSerializable = new SerializableDictionary<AbilityScore, TextMeshProUGUI>();
     private Dictionary<AbilityScore, TextMeshProUGUI> _abilityScores = new Dictionary<AbilityScore, TextMeshProUGUI>();
+
+    [Header("Combat Stats")]
+    [SerializeField] private TextMeshProUGUI _armorClass;
+    [SerializeField] private TextMeshProUGUI _speed;
+    [SerializeField] private TextMeshProUGUI _initiative;
 
     public void Start()
     {
@@ -27,20 +35,31 @@ public class CharacterSheet : MonoBehaviour
         if (_name != null)
             _name.SetTextWithoutNotify(_character.Name);
 
-        _abilityScores = _abilityScoresSerializable.ToDictionary();
-
-        foreach (var score in _abilityScores)
+        // Ability Scores
         {
-            score.Value.text = ((_character.AbilityScores[score.Key] >= 10) ? "+" : "") + ((_character.AbilityScores[score.Key] - 10) / 2).ToString();
-            Debug.Log("Ability Score: " + score.Key + " | " + score.Value);
+            _abilityScores = _abilityScoresSerializable.ToDictionary();
+
+            foreach (var score in _abilityScores)
+            {
+                score.Value.text = ((_character.AbilityScores[score.Key] >= 10) ? "+" : "") + ((_character.AbilityScores[score.Key] - 10) / 2).ToString();
+                Debug.Log("Ability Score: " + score.Key + " | " + score.Value);
+            }
         }
-
-        ClassIcon icon;
-
-        foreach (var characterClass in _character.CharacterClasses)
+        //Character Classes
         {
-            icon = Instantiate(_classIconPrefab, _iconTarget);
-            icon.Init(characterClass.Key, characterClass.Level);
+            ClassIcon icon;
+
+            foreach (var characterClass in _character.CharacterClasses)
+            {
+                icon = Instantiate(_classIconPrefab, _iconTarget);
+                icon.Init(characterClass.Key, characterClass.Level);
+            }
+        }
+        //Combat Stats
+        {
+            _armorClass.text = _character.ArmorClass.Total.ToString();
+            _speed.text = _character.Speed.ToString();
+            _initiative.text = ((_character.Initiative >= 0) ? "+" : "") + _character.Initiative.ToString();
         }
     }
 }

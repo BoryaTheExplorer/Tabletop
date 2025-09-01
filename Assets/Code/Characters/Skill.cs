@@ -29,7 +29,7 @@ public class Skill
     }
     public Skill(BasicSkill basicSkill, AbilityScore scalingAbility, ProficiencyType proficiency = ProficiencyType.None, int rollBonus = 0)
     {
-        this.Name = basicSkill.ToString();
+        this.Name = basicSkill.ToDescriptionString();
         this.ScalingAbility = scalingAbility;
         this.Proficiency = proficiency;
         this.RollBonus = rollBonus;
