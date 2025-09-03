@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterSheet : MonoBehaviour
 {
     private Character _character;
-
+    //###############MAIN PAGE###################
     [Header("Name")]
     [SerializeField] private TMP_InputField _name;
 
@@ -22,6 +22,12 @@ public class CharacterSheet : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _speed;
     [SerializeField] private TextMeshProUGUI _initiative;
 
+    //################SKILLS PAGE#####################
+    [Header("Skills")]
+    [SerializeField] private SkillUI _skillUIPrefab;
+    [SerializeField] private Transform _skillUITarget;
+    private List<SkillUI> _skillUIs = new List<SkillUI>();
+
     public void Start()
     {
         _character = new Character("Borys, Knight of the Vale", new Health(10));
@@ -31,35 +37,49 @@ public class CharacterSheet : MonoBehaviour
         _character.AddClassLevel(CharacterClassKey.Paladin);
 
         _character.AddClassLevel(CharacterClassKey.Rogue);
-
-        if (_name != null)
+        //MAIN PAGE
+        {
+            if (_name != null)
             _name.SetTextWithoutNotify(_character.Name);
 
-        // Ability Scores
-        {
-            _abilityScores = _abilityScoresSerializable.ToDictionary();
-
-            foreach (var score in _abilityScores)
+            // Ability Scores
             {
-                score.Value.text = ((_character.AbilityScores[score.Key] >= 10) ? "+" : "") + ((_character.AbilityScores[score.Key] - 10) / 2).ToString();
-                Debug.Log("Ability Score: " + score.Key + " | " + score.Value);
+                _abilityScores = _abilityScoresSerializable.ToDictionary();
+
+                foreach (var score in _abilityScores)
+                {
+                    score.Value.text = ((_character.AbilityScores[score.Key] >= 10) ? "+" : "") + ((_character.AbilityScores[score.Key] - 10) / 2).ToString();
+                    Debug.Log("Ability Score: " + score.Key + " | " + score.Value);
+                }
+            }
+            //Character Classes
+            {
+                ClassIcon icon;
+
+                foreach (var characterClass in _character.CharacterClasses)
+                {
+                    icon = Instantiate(_classIconPrefab, _iconTarget);
+                    icon.Init(characterClass.Key, characterClass.Level);
+                }
+            }
+            //Combat Stats
+            {
+                _armorClass.text = _character.ArmorClass.Total.ToString();
+                _speed.text = _character.Speed.ToString();
+                _initiative.text = ((_character.Initiative >= 0) ? "+" : "") + _character.Initiative.ToString();
             }
         }
-        //Character Classes
-        {
-            ClassIcon icon;
 
-            foreach (var characterClass in _character.CharacterClasses)
-            {
-                icon = Instantiate(_classIconPrefab, _iconTarget);
-                icon.Init(characterClass.Key, characterClass.Level);
-            }
-        }
-        //Combat Stats
+        //SKILLS PAGE 
         {
-            _armorClass.text = _character.ArmorClass.Total.ToString();
-            _speed.text = _character.Speed.ToString();
-            _initiative.text = ((_character.Initiative >= 0) ? "+" : "") + _character.Initiative.ToString();
+            SkillUI skillUI;
+
+            foreach (var skill in _character.SkillList)
+            {
+                skillUI = Instantiate(_skillUIPrefab, _skillUITarget);
+                skillUI.Init(skill.Proficiency, skill.Name);
+                _skillUIs.Add(skillUI);
+            }
         }
     }
 }
