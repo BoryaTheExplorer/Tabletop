@@ -6,5 +6,6 @@ public enum RollType
     SavingThrow,
     AttackRoll,
     AbilityCheck,
+    SkillCheck,
     DamageRoll
 }

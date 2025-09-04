@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.Netcode;
 using UnityEngine;
 
 public class CharacterSheet : MonoBehaviour
 {
     private Character _character;
+    [SerializeField] private NetworkMessageSender _messageSender;
     //###############MAIN PAGE###################
     [Header("Name")]
     [SerializeField] private TMP_InputField _name;
@@ -74,12 +76,27 @@ public class CharacterSheet : MonoBehaviour
         {
             SkillUI skillUI;
 
-            foreach (var skill in _character.SkillList)
+            foreach (var skill in _character.Skills.Values)
             {
                 skillUI = Instantiate(_skillUIPrefab, _skillUITarget);
                 skillUI.Init(skill.Proficiency, skill.Name);
+                skillUI.OnRollButtonPressed += SkillUI_OnRollButtonPressed;
+                skillUI.OnProficiencyButtonPressed += SkillUI_OnProficiencyButtonPressed;
                 _skillUIs.Add(skillUI);
             }
         }
+    }
+
+    private void SkillUI_OnProficiencyButtonPressed(ProficiencyType arg1, string arg2)
+    {
+        _character.SetSkillProficiency(arg2, arg1);
+    }
+
+    private void SkillUI_OnRollButtonPressed(string obj)
+    {
+        MessageRequest request = new MessageRequest(NetworkManager.Singleton.LocalClientId,
+                                                    MessageType.RollMessage,
+                                                    rollData: new RollMessageRequestData(RollType.SkillCheck, "1d20"));
+        _messageSender.SendMessageServerRpc(request);
     }
 }

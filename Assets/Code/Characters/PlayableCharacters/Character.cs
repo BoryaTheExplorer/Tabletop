@@ -23,7 +23,7 @@ public class Character
         { AbilityScore.Charisma,     10 }
     };
     public int ProficiencyBonus => 2 + (Level - 1) / 4;
-    public List<Skill> SkillList { get; private set; } = BasicSkillsProvider.BasicSkills.Select(s => new Skill(s)).ToList();
+    public Dictionary<string, Skill> Skills { get; private set; } = new Dictionary<string, Skill>();
 
     public Character()
     {
@@ -34,10 +34,17 @@ public class Character
     {
         this.Name = name;
         this.Health = health;
+
         if (abilityScores != null) 
             this.AbilityScores = abilityScores;
-        if (skillList != null)
-            this.SkillList = skillList;
+
+        if (skillList == null)
+            skillList = BasicSkillsProvider.BasicSkills.Select(s => new Skill(s)).ToList();    
+
+        foreach (var skill in skillList)
+        {
+            Skills.Add(skill.Name, skill);
+        }
     }
     public void AddClassLevel(CharacterClassKey characterClassKey)
     {
@@ -69,14 +76,20 @@ public class Character
 
         Debug.LogWarning($"Ability Score {abilityScore} not found in {Name}'s Ability Scores Dictionary");
     }
+    //SKILLS
     public void SetSkillProficiency(string skillName, ProficiencyType proficiency)
     {
-        Skill skill = SkillList.Where(q => q.Name == skillName).FirstOrDefault();
+        if (!Skills.ContainsKey(skillName))
+            return;
+        
+        Skills[skillName].SetProficiency(proficiency);
+    }
+    public void SetSkillRollBonus(string skillName, int bonus)
+    {
+        if (!Skills.ContainsKey(skillName))
+            return;
 
-        if (skill != null)
-        {
-            skill.SetProficiency(proficiency);
-        }
+        Skills[skillName].SetRollBonus(bonus);
     }
     //COMBAT
     public void Damage(Damage damage)
