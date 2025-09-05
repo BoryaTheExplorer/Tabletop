@@ -76,6 +76,22 @@ public class Character
 
         Debug.LogWarning($"Ability Score {abilityScore} not found in {Name}'s Ability Scores Dictionary");
     }
+    //PROF BONUS
+    public int GetProficiencyBonus(ProficiencyType proficiency)
+    {
+        switch (proficiency)
+        {
+            case ProficiencyType.None:
+                return 0;
+            case ProficiencyType.Half:
+                return ProficiencyBonus / 2;
+            case ProficiencyType.Proficient:
+                return ProficiencyBonus;
+            case ProficiencyType.Expertise:
+                return ProficiencyBonus * 2;
+        }
+        return 0;
+    }
     //SKILLS
     public void SetSkillProficiency(string skillName, ProficiencyType proficiency)
     {
@@ -90,6 +106,18 @@ public class Character
             return;
 
         Skills[skillName].SetRollBonus(bonus);
+    }
+    public int GetSkillBonus(string skillName)
+    {
+        int result = 0;
+
+        if (!Skills.ContainsKey(skillName))
+            return 0;
+
+        Skill skill = Skills[skillName];
+        result += (AbilityScores[skill.ScalingAbility] - 10) / 2 + skill.RollBonus + GetProficiencyBonus(skill.Proficiency);
+
+        return result;
     }
     //COMBAT
     public void Damage(Damage damage)

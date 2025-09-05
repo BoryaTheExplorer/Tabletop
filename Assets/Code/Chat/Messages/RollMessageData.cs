@@ -1,3 +1,4 @@
+using System;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -38,13 +39,13 @@ public struct RollMessageData : INetworkSerializable, IMessageData
 
         Outcomes = holder;
         
-        if (data.Modifiers != null)
+        if (data.Modifiers != default)
         {
             Modifiers = data.Modifiers;
             return;
         }
 
-        Modifiers = default;
+        Modifiers = Array.Empty<byte>();
     }
 
     public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
@@ -52,10 +53,6 @@ public struct RollMessageData : INetworkSerializable, IMessageData
         serializer.SerializeValue(ref RollType);
         serializer.SerializeValue(ref Dice);
         serializer.SerializeValue(ref Outcomes);
-
-        if (Modifiers == default)
-            return;
-
         serializer.SerializeValue(ref Modifiers);
     }
 }

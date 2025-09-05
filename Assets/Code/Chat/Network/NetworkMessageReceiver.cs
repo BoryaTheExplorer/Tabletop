@@ -36,7 +36,15 @@ public class NetworkMessageReceiver : NetworkBehaviour
                     outcomes.Add(die.Key, (int[])nums.Clone());
                     index += nums.Length;
                 }
-                MessageContainer.Instance.SpawnRollMessage(outcomes, content.Sender, content.RollMessage.RollType);
+
+                int[] mods = new int[content.RollMessage.Modifiers.Length];
+
+                for (int i = 0; i < mods.Length; i++)
+                {
+                    mods[i] = content.RollMessage.Modifiers[i];
+                }
+
+                MessageContainer.Instance.SpawnRollMessage(outcomes, content.Sender, content.RollMessage.RollType, mods);
                 break;
         }
         //

@@ -96,7 +96,7 @@ public class CharacterSheet : MonoBehaviour
     {
         MessageRequest request = new MessageRequest(NetworkManager.Singleton.LocalClientId,
                                                     MessageType.RollMessage,
-                                                    rollData: new RollMessageRequestData(RollType.SkillCheck, "1d20"));
+                                                    rollData: new RollMessageRequestData(RollType.SkillCheck, "1d20", new byte[] { (byte)_character.GetSkillBonus(obj) }));
         _messageSender.SendMessageServerRpc(request);
     }
 }

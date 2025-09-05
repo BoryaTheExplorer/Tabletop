@@ -1,3 +1,4 @@
+using System;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -11,17 +12,14 @@ public struct RollMessageRequestData : INetworkSerializable
     {
         RollType = rollType;
         Dice = dice;
-        Modifiers = modifiers;
+        
+        Modifiers = modifiers ?? Array.Empty<byte>();
     }
 
     public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
     {
         serializer.SerializeValue(ref RollType);
         serializer.SerializeValue(ref Dice);
-
-        if (Modifiers == null || Modifiers.Length == 0)
-            return;
-
         serializer.SerializeValue(ref Modifiers);
     }
 }

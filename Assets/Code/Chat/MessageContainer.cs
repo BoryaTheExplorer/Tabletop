@@ -29,13 +29,13 @@ public class MessageContainer : MonoBehaviour
         PlainMessage plainMessage = Instantiate(_plainMessagePrefab, _content);
         plainMessage.Init(sender, message);
     }
-    public void SpawnRollMessage(Dictionary<DiceType, int[]> rolls, string sender, RollType rollType, int[] modifiers = null)
+    public void SpawnRollMessage(Dictionary<DiceType, int[]> rolls, string sender, RollType rollType, int[] modifiers = default)
     {
         if (!HasSetup())
             return;
 
         RollMessage rollMessage = Instantiate(_rollMessagePrefab, _content);
-        rollMessage.Init(sender, rolls);
+        rollMessage.Init(sender, rolls, modifiers);
     }
     private bool HasSetup()
     {

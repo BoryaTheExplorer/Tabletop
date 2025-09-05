@@ -12,6 +12,7 @@ public class RollMessage : ChatMessage
     public void Init(string sender, Dictionary<DiceType, int[]> diceData, int[] modifiers = null)
     {
         _sender.text = sender;
+        
         int sum = 0;
         RollMessageDiceRolledUI dice_ui;
 
@@ -27,5 +28,14 @@ public class RollMessage : ChatMessage
         }
 
         _message.text = sum.ToString();
+        
+        if (modifiers == null) 
+            return;
+
+        int mod = 0;
+        foreach (int modifier in modifiers)
+            mod += modifier;
+
+        _message.text += " + " + mod.ToString();
     }
 }

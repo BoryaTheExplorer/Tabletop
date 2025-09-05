@@ -4256,6 +4256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db57a3d2d6ad824f8d87ca91ab526b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _messageSender: {fileID: 1065379613}
   _name: {fileID: 452432193}
   _classIconPrefab: {fileID: 62802505369986281, guid: 09f3b2e59ec7e2b47a53dd872b019fcd, type: 3}
   _iconTarget: {fileID: 707370368}

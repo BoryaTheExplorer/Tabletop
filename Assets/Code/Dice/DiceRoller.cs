@@ -97,8 +97,6 @@ public class DiceRoller : MonoBehaviour
 
         Vector3 angular = new Vector3(x, y, z);
 
-        Debug.Log(angular);
-
         return angular;
     }
 }
