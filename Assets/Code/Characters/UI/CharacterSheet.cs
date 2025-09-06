@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using Unity.Netcode;
 using UnityEngine;
@@ -79,7 +80,7 @@ public class CharacterSheet : MonoBehaviour
             foreach (var skill in _character.Skills.Values)
             {
                 skillUI = Instantiate(_skillUIPrefab, _skillUITarget);
-                skillUI.Init(skill.Proficiency, skill.Name);
+                skillUI.Init(skill.Proficiency, skill.Name, _character.GetSkillBonus(skill.Name));
                 skillUI.OnRollButtonPressed += SkillUI_OnRollButtonPressed;
                 skillUI.OnProficiencyButtonPressed += SkillUI_OnProficiencyButtonPressed;
                 _skillUIs.Add(skillUI);
@@ -87,9 +88,10 @@ public class CharacterSheet : MonoBehaviour
         }
     }
 
-    private void SkillUI_OnProficiencyButtonPressed(ProficiencyType arg1, string arg2)
+    private void SkillUI_OnProficiencyButtonPressed(ProficiencyType proficiency, string skillName)
     {
-        _character.SetSkillProficiency(arg2, arg1);
+        _character.SetSkillProficiency(skillName, proficiency);
+        _skillUIs.Where(q => q.SkillNameKey == skillName).FirstOrDefault().SetRollBonusText(_character.GetSkillBonus(skillName));
     }
 
     private void SkillUI_OnRollButtonPressed(string obj)
